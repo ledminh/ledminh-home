@@ -1,11 +1,13 @@
 import React from 'react';
+import cuid from 'cuid';
 
 import compose from 'utils/compose';
-
 import Button from './button';
 
-const toUpperCase = (arr) => arr.map(title => title.toUpperCase());
+const toUpperCase = (arr) => arr.map(button => Object.assign({}, button, {title: button.title.toUpperCase()}));
 
-const wrap = (arr) => arr.map((title, i) => <Button key={i}>{title}</Button>)
+const wrap = (arr) => arr.map((button, i) => <Button key={i} link={button.link}>{button.title}</Button>)
 
-export const renderButton = compose(wrap, toUpperCase);
+const smallScreen = (arr) => [...arr, <Button key={cuid()} smallscreen>MENU</Button>];
+
+export const renderButton = compose(smallScreen, wrap, toUpperCase);

@@ -1,5 +1,20 @@
 const messages = {
-  buttons: ["Home", "Projects", "Contact"]
+  buttons: [
+    {
+        title: "Home",
+        link: "/home"
+    },
+
+    {
+        title: "Projects",
+        link: "/projects"
+    },
+
+    {
+        title: "Contact",
+        link: "/contact"
+    }
+  ]
 }
 
 export default messages;
