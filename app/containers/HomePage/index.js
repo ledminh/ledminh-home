@@ -10,16 +10,24 @@
  */
 
 import React from 'react';
+<<<<<<< HEAD
+import Header from 'components/Header';
+=======
 
 import Header from 'components/Header';
 
 import messages from './messages';
+>>>>>>> 1e947d383e879b01bfdb46953b5e5651de540a68
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
+<<<<<<< HEAD
+        <Header />        
+=======
           <Header />
+>>>>>>> 1e947d383e879b01bfdb46953b5e5651de540a68
       </div>
     );
   }
