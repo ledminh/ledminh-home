@@ -10,7 +10,9 @@
  */
 
 import React from 'react';
+
 import Header from 'components/Header';
+import Navigation from 'components/Navigation';
 
 import messages from './messages';
 
@@ -19,6 +21,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     return (
       <div>
         <Header />
+        <Navigation />
       </div>
     );
   }
