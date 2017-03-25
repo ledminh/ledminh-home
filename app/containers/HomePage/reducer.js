@@ -13,7 +13,7 @@ import { fromJS } from 'immutable';
 
 // The initial state of the App
 const initialState = fromJS({
-  aboutMe: {},
+  
 });
 
 function homeReducer(state = initialState, action) {
