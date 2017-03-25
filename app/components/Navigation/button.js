@@ -4,14 +4,14 @@ import styled from 'styled-components';
 
 const normalButton = `
     display: inline-block;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 700px) {
         display: none;
     }
 `;
 
 const smallScreenButton = `
     display: none;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 700px) {
         position: absolute;
         left: 50%;
         top: 50%

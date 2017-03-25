@@ -8,6 +8,8 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 5px;
   background-color: gray;
+
+  z-index: 1000;
 `;
 
 export default Wrapper;
