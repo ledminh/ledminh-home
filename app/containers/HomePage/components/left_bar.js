@@ -11,6 +11,7 @@ const Frame = styled.div`
 
     padding: 10px;
 
+    
     display: inline-block;
     @media screen and (max-width: 700px) {
         display: none;
@@ -23,6 +24,7 @@ const Content = styled.div`
   height: 100%;
   background-color: white;
   border-radius: 10px;
+  padding: 10px;
 `;
 
 const LeftBar = ({children}) => (
