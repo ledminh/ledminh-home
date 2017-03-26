@@ -20,11 +20,11 @@ import TopBar from './components/top_bar';
 import LeftBar from './components/left_bar';
 import MainContent from './components/main_content';
 
-import ProfilePicture from './components/profile_picture';
+import ProfilePicture from 'containers/ProfilePicture';
 
 import messages from './messages';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
@@ -53,3 +53,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     );
   }
 }
+
+
+export default HomePage;
