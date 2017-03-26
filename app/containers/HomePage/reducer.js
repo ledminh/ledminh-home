@@ -9,15 +9,10 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
-import { fromJS } from 'immutable';
+import profile_picture from 'containers/ProfilePicture/reducer';
+import {combineReducers} from 'redux';
 
-// The initial state of the App
-const initialState = fromJS({
-  
+
+export default combineReducers({
+  profile_picture
 });
-
-function homeReducer(state = initialState, action) {
-  return state;
-}
-
-export default homeReducer;
