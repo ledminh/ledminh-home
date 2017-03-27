@@ -21,6 +21,7 @@ import LeftBar from './components/left_bar';
 import MainContent from './components/main_content';
 
 import ProfilePicture from 'containers/ProfilePicture';
+import ProfileButtons from 'containers/ProfileButtons';
 
 import messages from './messages';
 
@@ -44,6 +45,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
 
             <LeftBar>
                 <ProfilePicture />
+                <ProfileButtons />
             </LeftBar>
 
 
