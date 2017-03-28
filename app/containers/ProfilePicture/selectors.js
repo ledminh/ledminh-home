@@ -16,9 +16,14 @@ const makeSelectThen = () => createSelector(
   (profile_picture) => profile_picture.get('then')
 );
 
+const makeSelectClicked = () => createSelector(
+  selectProfilePicture,
+  (profile_picture) => profile_picture.get('clicked')
+);
 
 export {
   selectHome,
   makeSelectNow,
-  makeSelectThen
+  makeSelectThen,
+  makeSelectClicked
 };

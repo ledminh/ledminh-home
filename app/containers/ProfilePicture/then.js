@@ -50,8 +50,8 @@ const Text = styled.div`
   }
 `;
 
-const Then = ({state, onMouseEnter, onMouseLeave}) => (
-  <Frame state={state} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+const Then = ({state, onMouseEnter, onMouseLeave, onClick}) => (
+  <Frame state={state} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
       <Text state={state}>THEN</Text>
   </Frame>
 );

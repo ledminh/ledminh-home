@@ -17,6 +17,7 @@ export const ENTER = 'ledminh/ProfilePicture/ENTER';
 export const CLICK = 'ledminh/ProfilePicture/CLICK';
 export const LEAVE = 'ledminh/ProfilePicture/LEAVE';
 
-export const SHOW = 'ledminh/ProfilePicture/SHOW';
+export const NORMAL = 'ledminh/ProfilePicture/NORMAL';
 export const BOLD = 'ledminh/ProfilePicture/BOLD';
 export const HIDE = 'ledminh/ProfilePicture/HIDE';
+export const CLICKED = 'ledminh/ProfilePicture/CLICKED';
