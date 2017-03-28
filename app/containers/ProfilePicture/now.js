@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 import {
   HIDE,
-  BOLD
+  BOLD,
+  NOW
 } from './constants';
+
 
 const Frame = styled.div`
   position: absolute;
   right: 0px;
   width: 155px;
   height: 250px;
-  background-color: ${(props) => (props.state === BOLD)? `rgba(10,10,10, .7)` : `rgba(10,10,10, .4)`}
+  background-color: ${(props) => (props.state === BOLD)? `rgba(10,10,10, .4)` : `rgba(10,10,10, .2)`}
   transform-origin: right top;
   transform: rotate(40deg);
   cursor: pointer;
@@ -47,8 +49,8 @@ const Text = styled.div`
   }
 `;
 
-const Now = ({state, onMouseEnter, onMouseLeave}) => (
-  <Frame state={state} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+const Now = ({state, clicked, onMouseEnter, onMouseLeave, onClick}) => (
+  <Frame state={state} clicked={clicked} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
       <Text state={state}>NOW</Text>
   </Frame>
 );

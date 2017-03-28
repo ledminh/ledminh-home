@@ -3,13 +3,16 @@ import {fromJS} from 'immutable';
 import {
     HIDE,
     NOW,
-    THEN
+    THEN,
+    CLICK
 } from './constants';
 
 const initialState = fromJS({
     now: HIDE,
-    then: HIDE
+    then: HIDE,
+    clicked: NOW
 });
+
 
 export default function profilePictureReducer(state = initialState, action){
   switch(action.type){
@@ -19,7 +22,9 @@ export default function profilePictureReducer(state = initialState, action){
     case THEN:
       return state
                 .set('then', action.state);
-
+    case CLICK:
+      return state
+               .set('clicked', action.name);
   }
 
   return state;

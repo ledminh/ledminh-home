@@ -11,31 +11,41 @@ import {
   NOW,
   THEN,
 
-  SHOW,
+  NORMAL,
   HIDE,
-  BOLD
+  BOLD,
+  CLICKED
 } from './constants';
+
+import {makeSelectClicked} from './selectors';
+
 /**
  * Root saga manages watcher lifecycle
  */
 
 export default function* profilePictureWatcher() {
-  yield fork(enterSaga);
-  yield fork(leaveSaga);
+  yield [
+      fork(enterSaga),
+      fork(leaveSaga),
+      fork(clickSaga)
+  ];
 
 }
 
 function* enterSaga(){
   while(true){
     let enterAction = yield take(ENTER);
+    let clicked = yield select(makeSelectClicked());
 
     switch(enterAction.name){
       case PICTURE:
-          yield [
-              put(now(SHOW)),
-              put(then(SHOW))
-          ]
-      break;
+          if(clicked !== NOW)
+              yield put(now(NORMAL));
+
+          if(clicked !== THEN)
+              yield put(then(NORMAL));
+
+          break;
       case NOW:
           yield put(now(BOLD));
           break;
@@ -47,25 +57,49 @@ function* enterSaga(){
 }
 
 function* clickSaga(){
+    let clicked = yield select(makeSelectClicked());
 
+    if(clicked === NOW)
+      yield put(now(BOLD));
+    else if (clicked === THEN)
+      yield put(then(BOLD));
+
+    while(true){
+      let clickAction = yield take(CLICK);
+
+      switch(clickAction.name){
+        case NOW:
+          yield put(then(NORMAL));
+          break;
+        case THEN:
+          yield put(now(NORMAL));
+          break;
+      }
+    }
 }
 
 function* leaveSaga(){
   while(true){
-    let enterAction = yield take(LEAVE);
+    let leaveAction = yield take(LEAVE);
+    let clicked = yield select(makeSelectClicked());
 
-    switch(enterAction.name){
+    switch(leaveAction.name){
       case PICTURE:
-          yield [
-              put(now(HIDE)),
-              put(then(HIDE))
-          ]
-      break;
+          if(clicked !== NOW)
+            yield put(now(HIDE));
+
+          if(clicked !== THEN)
+            yield put(then(HIDE));
+
+          break;
       case NOW:
-          yield put(now(SHOW));
+          if(clicked !== NOW)
+            yield put(now(NORMAL));
+
           break;
       case THEN:
-          yield put(then(SHOW));
+          if(clicked !== THEN)
+            yield put(then(NORMAL));
     }
 
   }

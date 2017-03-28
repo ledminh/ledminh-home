@@ -9,6 +9,8 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
+import {fromJS} from 'immutable';
+
 import profile_picture from 'containers/ProfilePicture/reducer';
 import {combineReducers} from 'redux';
 

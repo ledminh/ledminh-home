@@ -39,18 +39,18 @@ export function enter(name) {
   };
 }
 
-export function click(name) {
-  return {
-    type: CLICK,
-    name,
-  };
-}
-
 export function leave(name){
   return {
     type: LEAVE,
     name
   }
+}
+
+export function click(name){
+    return {
+      type: CLICK,
+      name
+    }
 }
 
 export function now(state){

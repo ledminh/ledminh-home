@@ -5,10 +5,12 @@ import {connect} from 'react-redux';
 
 import Now from './now';
 import Then from './then';
+import NowThen from './now_then';
+
 import Frame from './frame';
 import Img from './img';
 
-import {makeSelectNow, makeSelectThen} from "./selectors";
+import {makeSelectNow, makeSelectThen, makeSelectClicked} from "./selectors";
 
 import {
   NOW,
@@ -21,17 +23,20 @@ import {enter, leave, click} from './actions';
 
 const ProfilePicture = ({position, onEnterPicture, onEnterNow, onEnterThen,
                             onLeavePicture, onLeaveNow, onLeaveThen,
-                            now, then}) => (position === "left")? (
+                            onClickNow, onClickThen,
+                            now, then, clicked}) => (position === "left")? (
   <Frame position={position} onMouseEnter={onEnterPicture} onMouseLeave={onLeavePicture}>
-      <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow}/>
-      <Then state={then} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen}/>
+      <NowThen>
+          <Now state={now} clicked={clicked === NOW} position={position} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow} onClick={onClickNow}/>
+          <Then state={then} clicked={clicked === THEN} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen} onClick={onClickThen}/>
+      </NowThen>
       <Img position={position} src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
   </Frame>
 ) : (
   <Frame position={position} onMouseEnter={onEnterPicture} onMouseLeave={onLeavePicture}>
       <Img position={position} src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
-      <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow}/>
-      <Then state={then} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen}/>
+      <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow} onClick={onClickNow}/>
+      <Then state={then} position={position} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen} onClick={onClickThen}/>
   </Frame>
 );
 
@@ -52,7 +57,8 @@ function mapDispatchToProps(dispatch) {
 
 const mapStateToProps = createStructuredSelector({
     now: makeSelectNow(),
-    then: makeSelectThen()
+    then: makeSelectThen(),
+    clicked: makeSelectClicked()
 });
 
 
