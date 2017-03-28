@@ -15,7 +15,7 @@ const Frame = styled.div`
     min-height: 400px;
 
     @media screen and (max-width: 700px) {
-      margin-top: 35px;
+      margin-top: 220px;
       margin-left: 0px;
 
       min-height: auto;

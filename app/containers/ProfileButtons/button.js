@@ -19,6 +19,12 @@ const Style = styled.div`
       background-color: #505151;
       color: white;
     }
+    display: block;
+
+    @media screen and (max-width: 700px){
+        display: inline-block;
+        margin: 0px 15px 0px 0px;
+    }
 `;
 
 const Button = ({children}) => (

@@ -19,13 +19,19 @@ import {
 import {enter, leave, click} from './actions';
 
 
-const ProfilePicture = ({onEnterPicture, onEnterNow, onEnterThen,
+const ProfilePicture = ({position, onEnterPicture, onEnterNow, onEnterThen,
                             onLeavePicture, onLeaveNow, onLeaveThen,
-                            now, then}) => (
-  <Frame onMouseEnter={onEnterPicture} onMouseLeave={onLeavePicture}>
+                            now, then}) => (position === "left")? (
+  <Frame position={position} onMouseEnter={onEnterPicture} onMouseLeave={onLeavePicture}>
       <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow}/>
       <Then state={then} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen}/>
-      <Img src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
+      <Img position={position} src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
+  </Frame>
+) : (
+  <Frame position={position} onMouseEnter={onEnterPicture} onMouseLeave={onLeavePicture}>
+      <Img position={position} src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
+      <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow}/>
+      <Then state={then} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen}/>
   </Frame>
 );
 

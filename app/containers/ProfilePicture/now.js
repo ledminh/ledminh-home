@@ -17,8 +17,17 @@ const Frame = styled.div`
   cursor: pointer;
   transition: opacity .4s, background-color .4s;
 
-  opacity: ${(props) => (props.state !== HIDE)? 1 : 0}
+  opacity: ${(props) => (props.state !== HIDE)? 1 : 0};
 
+  @media screen and (max-width: 700px) {
+    position: relative;
+    width: 50%;
+    height: 150px;
+    transform: none;
+    opacity: 1;
+    background-color: ${(props) => (props.state === HIDE)? `transparent` : ((props.state === BOLD)? `rgba(10,10,10, .7)` : `rgba(10,10,10, .4)`)}
+    z-index: 0;
+  }
 `;
 
 const Text = styled.div`
@@ -26,12 +35,16 @@ const Text = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(0%, -50%) rotate(-40deg);
-
   color: white;
   font-weight: bold;
-
   transition: font-size .4s;
-  font-size: ${(props) => (props.state === BOLD)? `25px` : `20px`}
+  font-size: ${(props) => (props.state === BOLD)? `25px` : `20px`};
+
+  @media screen and (max-width: 700px){
+    transform: translate(-50%, -50%) rotate(0deg);
+    font-size: 40px;
+    color: ${(props) => (props.state === HIDE)? `#828282` : ((props.state === BOLD)? `white` : `#a5a5a5`)}
+  }
 `;
 
 const Now = ({state, onMouseEnter, onMouseLeave}) => (

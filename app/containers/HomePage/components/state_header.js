@@ -13,6 +13,7 @@ const Style = styled.div`
     border-radius: 0px 15px 15px 0px;
 
     display: block;
+
     @media screen and (max-width: 700px) {
       display: none;
     }

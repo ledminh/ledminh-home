@@ -11,8 +11,9 @@ const Frame = styled.div`
 
     padding: 10px;
 
-    
+
     display: inline-block;
+
     @media screen and (max-width: 700px) {
         display: none;
     }
