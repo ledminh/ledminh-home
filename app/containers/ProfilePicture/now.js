@@ -13,7 +13,7 @@ const Frame = styled.div`
   right: 0px;
   width: 155px;
   height: 250px;
-  background-color: ${(props) => (props.state === BOLD)? `rgba(10,10,10, .4)` : `rgba(10,10,10, .2)`}
+  background-color: ${(props) => (props.state === BOLD)? `rgba(20,43,91, .7)` : `rgba(20,43,91, .4)`};
   transform-origin: right top;
   transform: rotate(40deg);
   cursor: pointer;
@@ -27,7 +27,7 @@ const Frame = styled.div`
     height: 150px;
     transform: none;
     opacity: 1;
-    background-color: ${(props) => (props.state === HIDE)? `transparent` : ((props.state === BOLD)? `rgba(10,10,10, .7)` : `rgba(10,10,10, .4)`)}
+    background-color: ${(props) => (props.state === HIDE)? `transparent` : ((props.state === BOLD)? `rgba(20,43,91, .7)` : `rgba(20,43,91, .4)`)};
     z-index: 0;
   }
 `;

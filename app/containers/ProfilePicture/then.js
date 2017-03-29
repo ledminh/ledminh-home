@@ -11,7 +11,7 @@ const Frame = styled.div`
   right: 0px;
   width: 300px;
   height: 260px;
-  background-color: ${(props) => (props.state === BOLD)? `rgba(20,43,91, .7)` : `rgba(20,43,91, .4)`}
+  background-color: ${(props) => (props.state === BOLD)? `rgba(10,10,10, .7)` : `rgba(10,10,10, .4)`}
   transform-origin: right top;
   transform: rotate(-50deg);
   cursor: pointer;
@@ -24,7 +24,7 @@ const Frame = styled.div`
     width: 50%;
     height: 150px;
     opacity: 1;
-    background-color: ${(props) => (props.state === HIDE)? `transparent` : ((props.state === BOLD)? `rgba(20,43,91, .7)` : `rgba(20,43,91, .4)`)}
+    background-color: ${(props) => (props.state === HIDE)? `transparent` : ((props.state === BOLD)? `rgba(10,10,10, .7)` : `rgba(10,10,10, .4)`)};
     transform: none;
   }
 

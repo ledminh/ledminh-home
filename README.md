@@ -5,6 +5,6 @@ This is my portfolio website built upon react-boilerplate (https://github.com/re
 
 ```
   git clone https://github.com/ledminh/ledminh-home.git
-  npm run setup
+  npm install
   npm run start
 ```
