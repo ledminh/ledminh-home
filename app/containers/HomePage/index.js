@@ -42,12 +42,12 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
 
         <MainFrame>
             <TopBar>
-                <ProfilePicture position="top" />
+                <ProfilePicture />
                 <ProfileButtons />
             </TopBar>
 
             <LeftBar>
-                <ProfilePicture position="left"/>
+                <ProfilePicture />
                 <ProfileButtons />
             </LeftBar>
 

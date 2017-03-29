@@ -8,4 +8,8 @@ export default styled.div`
     &:hover {
       opacity: 1;
     }
+
+    @media screen and (max-width: 700px){
+        opacity: 1;
+    }
 `

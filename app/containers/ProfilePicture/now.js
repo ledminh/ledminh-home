@@ -49,8 +49,8 @@ const Text = styled.div`
   }
 `;
 
-const Now = ({state, clicked, onMouseEnter, onMouseLeave, onClick}) => (
-  <Frame state={state} clicked={clicked} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
+const Now = ({state, onMouseEnter, onMouseLeave, onClick}) => (
+  <Frame state={state} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
       <Text state={state}>NOW</Text>
   </Frame>
 );
