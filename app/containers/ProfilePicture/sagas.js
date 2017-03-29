@@ -1,6 +1,12 @@
 import { take, call, put, fork, select, cancel, takeLatest } from 'redux-saga/effects';
 
 import {now, then} from './actions';
+import {changeProfile} from 'containers/HomePage/actions';
+
+import {
+  PROFILE_NOW,
+  PROFILE_THEN
+} from 'containers/HomePage/constants';
 
 import {
   ENTER,
@@ -13,8 +19,7 @@ import {
 
   NORMAL,
   HIDE,
-  BOLD,
-  CLICKED
+  BOLD
 } from './constants';
 
 import {makeSelectClicked} from './selectors';
@@ -57,6 +62,7 @@ function* enterSaga(){
 }
 
 function* clickSaga(){
+    //get init value
     let clicked = yield select(makeSelectClicked());
 
     if(clicked === NOW)
@@ -70,9 +76,13 @@ function* clickSaga(){
       switch(clickAction.name){
         case NOW:
           yield put(then(NORMAL));
+          yield put(changeProfile(PROFILE_NOW));
+
           break;
+
         case THEN:
           yield put(now(NORMAL));
+          yield put(changeProfile(PROFILE_THEN));
           break;
       }
     }

@@ -12,6 +12,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import {createStructuredSelector} from 'reselect';
+import {connect} from 'react-redux';
+
+
 import Header from 'components/Header';
 import Navigation from 'components/Navigation';
 
@@ -22,6 +26,9 @@ import MainContent from './components/main_content';
 
 import ProfilePicture from 'containers/ProfilePicture';
 import ProfileButtons from 'containers/ProfileButtons';
+
+
+import {makeSelectCurrentProfile} from './selectors';
 
 import messages from './messages';
 
@@ -40,7 +47,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
         <Header />
         <Navigation />
 
-        <MainFrame>
+        <MainFrame current_profile={this.props.current_profile}>
             <TopBar>
                 <ProfilePicture />
                 <ProfileButtons />
@@ -52,7 +59,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
             </LeftBar>
 
 
-            <MainContent>
+            <MainContent current_profile={this.props.current_profile}>
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia"
             </MainContent>
         </MainFrame>
@@ -61,5 +68,19 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
   }
 }
 
+HomePage.propTypes = {
+  current_profile: React.PropTypes.string
+}
 
-export default HomePage;
+function mapDispatchToProps(dispatch){
+  return {
+
+  }
+}
+
+
+const mapStateToProps = createStructuredSelector({
+  current_profile: makeSelectCurrentProfile()
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(HomePage);

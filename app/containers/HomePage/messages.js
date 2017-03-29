@@ -11,3 +11,8 @@ export default defineMessages({
     defaultMessage: 'This is HomePage component!',
   },
 });
+
+export const state_header = {
+  now: 'NOW',
+  then: 'THEN'
+}

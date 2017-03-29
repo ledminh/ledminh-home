@@ -10,7 +10,7 @@ import NowThen from './now_then';
 import Frame from './frame';
 import Img from './img';
 
-import {makeSelectNow, makeSelectThen, makeSelectClicked} from "./selectors";
+import {makeSelectNow, makeSelectThen} from "./selectors";
 
 import {
   NOW,
@@ -51,8 +51,7 @@ function mapDispatchToProps(dispatch) {
 
 const mapStateToProps = createStructuredSelector({
     now: makeSelectNow(),
-    then: makeSelectThen(),
-    clicked: makeSelectClicked()
+    then: makeSelectThen()
 });
 
 

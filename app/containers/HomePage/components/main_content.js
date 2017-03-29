@@ -29,9 +29,9 @@ const Content = styled.div`
     }
 `;
 
-const MainContent = ({children}) => (
+const MainContent = ({children, current_profile}) => (
     <Frame>
-      <StateHeader />
+      <StateHeader current_profile={current_profile}/>
       <Content>
           {children}
       </Content>

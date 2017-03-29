@@ -22,7 +22,7 @@ const makeSelectClicked = () => createSelector(
 );
 
 export {
-  selectHome,
+  selectProfilePicture,
   makeSelectNow,
   makeSelectThen,
   makeSelectClicked
