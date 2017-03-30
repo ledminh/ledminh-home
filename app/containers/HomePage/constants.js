@@ -10,6 +10,12 @@
  */
 
 export const CHANGE_PROFILE = 'ledminh/HomePage/CHANGE_PROFILE';
+export const CHANGE_SECTION = 'ledminh/HomePage/CHANGE_SECTION';
 
 export const PROFILE_NOW = 'ledminh/HomePage/PROFILE_NOW';
 export const PROFILE_THEN = 'ledminh/HomePage/PROFILE_THEN';
+
+export const SECTION_SUMMARY = 'ledminh/HomePage/SECTION_SUMMARY';
+export const SECTION_SKILLS = 'ledminh/HomePage/SECTION_SKILLS';
+export const SECTION_EXPERIENCE = 'ledminh/HomePage/SECTION_EXPERIENCE';
+export const SECTION_EDUCATION = 'ledminh/HomePage/SECTION_EDUCATION';

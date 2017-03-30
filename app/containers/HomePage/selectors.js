@@ -11,7 +11,13 @@ const makeSelectCurrentProfile = () => createSelector(
   (home_state) => home_state.get('current_profile')
 );
 
+const makeSelectCurrentSection = () => createSelector(
+  selectHomeState,
+  (home_state) => home_state.get('current_section')
+);
+
 export {
   selectHomeState,
-  makeSelectCurrentProfile
+  makeSelectCurrentProfile,
+  makeSelectCurrentSection
 };

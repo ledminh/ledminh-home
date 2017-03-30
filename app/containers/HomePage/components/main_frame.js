@@ -6,7 +6,7 @@ import {
 
 const MainFrame = styled.div`
     position: relative;
-    background-color: ${props => (props.current_profile === PROFILE_NOW)? `#95aee2` : `#c4c4c4`};
+    background-color: ${props => (props.current_profile === PROFILE_NOW)? `#c4c4c4` : `#95aee2`};
     width: 90%;
     min-width: 500px;
     max-width: 1200px;
