@@ -1,11 +1,13 @@
 import { take, call, put, fork, select, cancel, takeLatest } from 'redux-saga/effects';
 
 import {now, then} from './actions';
-import {changeProfile} from 'containers/HomePage/actions';
+import {changeProfile, changeSection} from 'containers/HomePage/actions';
 
 import {
   PROFILE_NOW,
-  PROFILE_THEN
+  PROFILE_THEN,
+
+  SECTION_SUMMARY
 } from 'containers/HomePage/constants';
 
 import {
@@ -77,12 +79,13 @@ function* clickSaga(){
         case NOW:
           yield put(then(NORMAL));
           yield put(changeProfile(PROFILE_NOW));
-
+          yield put(changeSection(SECTION_SUMMARY));
           break;
 
         case THEN:
           yield put(now(NORMAL));
           yield put(changeProfile(PROFILE_THEN));
+          yield put(changeSection(SECTION_SUMMARY));
           break;
       }
     }

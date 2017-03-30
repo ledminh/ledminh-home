@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {renderParagraphs} from './utils';
+
 import {
     SECTION_SUMMARY
 } from 'containers/HomePage/constants';
@@ -14,12 +16,15 @@ const show = `
   display: block;
 `;
 
+import {about_me} from 'data';
+
 const Style = styled.div`
     ${(props) => (props.current_section === SECTION_SUMMARY)? show : hidden}
 `;
 
 const Summary = ({current_profile, current_section}) => (
-    <Style current_profile={current_profile}>
+    <Style current_section={current_section}>
+        {renderParagraphs(about_me[current_profile].summary)}
     </Style>
 );
 
