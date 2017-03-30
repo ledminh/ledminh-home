@@ -16,11 +16,15 @@ import {combineReducers} from 'redux';
 
 import {
   PROFILE_NOW,
-  CHANGE_PROFILE
+  SECTION_SUMMARY,
+
+  CHANGE_PROFILE,
+  CHANGE_SECTION
 } from './constants';
 
 const initialState = fromJS({
-  current_profile: PROFILE_NOW
+  current_profile: PROFILE_NOW,
+  current_section: SECTION_SUMMARY
 });
 
 function home_state(state = initialState, action){
@@ -28,6 +32,9 @@ function home_state(state = initialState, action){
     case CHANGE_PROFILE:
       return state
                 .set('current_profile', action.name);
+    case CHANGE_SECTION:
+      return state
+                .set('current_section', action.name);
   }
 
   return state;

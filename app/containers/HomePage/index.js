@@ -23,14 +23,17 @@ import MainFrame from './components/main_frame';
 import TopBar from './components/top_bar';
 import LeftBar from './components/left_bar';
 import MainContent from './components/main_content';
+import ProfileButtons from 'components/ProfileButtons';
+
+import ProfileText from 'components/ProfileText';
 
 import ProfilePicture from 'containers/ProfilePicture';
-import ProfileButtons from 'containers/ProfileButtons';
 
 
-import {makeSelectCurrentProfile} from './selectors';
+import {makeSelectCurrentProfile, makeSelectCurrentSection} from './selectors';
 
 import messages from './messages';
+import {about_me} from 'data';
 
 class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -49,18 +52,19 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
 
         <MainFrame current_profile={this.props.current_profile}>
             <TopBar>
-                <ProfilePicture />
-                <ProfileButtons />
+                <ProfilePicture  />
+                <ProfileButtons current_profile={this.props.current_profile}/>
             </TopBar>
 
             <LeftBar>
-                <ProfilePicture />
-                <ProfileButtons />
+                <ProfilePicture  />
+                <ProfileButtons current_profile={this.props.current_profile} />
             </LeftBar>
 
 
             <MainContent current_profile={this.props.current_profile}>
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia"
+                <ProfileText current_profile={this.props.current_profile}
+                              current_section={this.props.current_section}/>
             </MainContent>
         </MainFrame>
       </div>
@@ -69,7 +73,8 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
 }
 
 HomePage.propTypes = {
-  current_profile: React.PropTypes.string
+  current_profile: React.PropTypes.string,
+  current_section: React.PropTypes.string
 }
 
 function mapDispatchToProps(dispatch){
@@ -80,7 +85,8 @@ function mapDispatchToProps(dispatch){
 
 
 const mapStateToProps = createStructuredSelector({
-  current_profile: makeSelectCurrentProfile()
+  current_profile: makeSelectCurrentProfile(),
+  current_section: makeSelectCurrentSection()
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(HomePage);

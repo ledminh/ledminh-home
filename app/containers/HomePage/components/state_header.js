@@ -7,7 +7,7 @@ import {
 
 import {state_header} from '../messages';
 
-const now = `
+const then = `
   left: 0px;
   background-color: #305bb5;
   padding: 10px 40px 10px 10px;
@@ -15,7 +15,7 @@ const now = `
 `;
 
 
-const then = `
+const now = `
   right: 0px;
   background-color: #6d6d6d;
   padding: 10px 10px 10px 40px;

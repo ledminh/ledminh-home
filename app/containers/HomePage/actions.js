@@ -16,7 +16,8 @@
  */
 
 import {
-  CHANGE_PROFILE
+  CHANGE_PROFILE,
+  CHANGE_SECTION
 } from './constants';
 
 
@@ -31,6 +32,13 @@ import {
 export function changeProfile(name){
   return {
     type: CHANGE_PROFILE,
+    name
+  };
+}
+
+export function changeSection(name){
+  return {
+    type: CHANGE_SECTION,
     name
   };
 }
