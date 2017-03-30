@@ -19,7 +19,8 @@ const Style = styled.div`
 `;
 
 const Experience = ({current_profile, current_section}) => (
-  <Style current_profile={current_profile}>
+  <Style current_section={current_section}>
+      Experiences
   </Style>
 );
 

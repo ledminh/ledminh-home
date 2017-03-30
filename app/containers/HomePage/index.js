@@ -33,7 +33,6 @@ import ProfilePicture from 'containers/ProfilePicture';
 import {makeSelectCurrentProfile, makeSelectCurrentSection} from './selectors';
 
 import messages from './messages';
-import {about_me} from 'data';
 
 class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
