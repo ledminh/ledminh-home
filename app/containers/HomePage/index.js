@@ -12,6 +12,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+
+
 import {createStructuredSelector} from 'reselect';
 import {connect} from 'react-redux';
 
@@ -34,38 +36,39 @@ import {makeSelectCurrentProfile, makeSelectCurrentSection} from './selectors';
 
 import messages from './messages';
 
+
 class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        <Helmet
-          title="::: LEDMINH HOME :::"
-          meta={[
-            { name: 'description', content: 'My Portfolio Website' },
-            { name: 'keywords', content: 'React, Redux, Node.js, JavaScript, mongoDB, freeCodeCamp, Express.js'},
-            { name: 'author', content: 'Minh Le'}
-          ]}
-        />
-        <Header />
-        <Navigation />
+          <Helmet
+            title="::: LEDMINH HOME :::"
+            meta={[
+              { name: 'description', content: 'My Portfolio Website' },
+              { name: 'keywords', content: 'React, Redux, Node.js, JavaScript, mongoDB, freeCodeCamp, Express.js'},
+              { name: 'author', content: 'Minh Le'}
+            ]}
+          />
+          <Header />
+          <Navigation />
 
-        <MainFrame current_profile={this.props.current_profile}>
-            <TopBar>
-                <ProfilePicture  />
-                <ProfileButtons current_profile={this.props.current_profile}/>
-            </TopBar>
+          <MainFrame current_profile={this.props.current_profile}>
+              <TopBar>
+                  <ProfilePicture  />
+                  <ProfileButtons current_profile={this.props.current_profile}/>
+              </TopBar>
 
-            <LeftBar>
-                <ProfilePicture  />
-                <ProfileButtons current_profile={this.props.current_profile} />
-            </LeftBar>
+              <LeftBar>
+                  <ProfilePicture  />
+                  <ProfileButtons current_profile={this.props.current_profile} />
+              </LeftBar>
 
 
-            <MainContent current_profile={this.props.current_profile}>
-                <ProfileText current_profile={this.props.current_profile}
-                              current_section={this.props.current_section}/>
-            </MainContent>
-        </MainFrame>
+              <MainContent current_profile={this.props.current_profile}>
+                  <ProfileText current_profile={this.props.current_profile}
+                                current_section={this.props.current_section}/>
+              </MainContent>
+          </MainFrame>
       </div>
     );
   }
