@@ -12,7 +12,44 @@ export const about_me = {
 
               I’m looking for a job that I am passionate about and will help me improve my skills
               on programming, communication and teamwork. I’m also seeking for the
-              opportunity to learn new skills for future use.br`
+              opportunity to learn new skills for future use.br`,
+
+    skills : {
+      'Languages and Skills': {
+        JavaScript: `I started learning JavaScipt in 2015 with freeCodeCamp. So far, I have built several
+                    intermediate-size web apps using JavaScript, mostly with frameworks and libraries like
+                    jQuery and React. I'm not quite strong in basic JavaScript but I know enough concepts to
+                    get by, like closure, prototypal inheritant, functional programming, arrow function,compose,
+                    and curry. The most important thing is I'm still learning and I know where to look for the
+                    knowledge that I forget or don't know yet.`,
+        'Node.js' : `I learned Node indirectly through setting up and installing dependencies for React projects
+                    as well as using webpack for packing. I also built several simple API servers for my web apps
+                    using Node. I read "Node.js in Action" and found many interesting ideas in the book but I haven't
+                    had the change to practice them yet.`,
+        HTML: ``,
+        CSS: ``
+      },
+
+      Database: {
+        mongoDB: ``
+      },
+
+      'Frameworks/Libraries': {
+        React: ``,
+        Redux: ``,
+        D3: ``,
+        jQuery: ``,
+        Saga: ``,
+        SCSS: ``,
+        'Express.js': ``
+      },
+
+      Others: {
+        Java: ``,
+        'C++': ``,
+        Assembly: ``
+      }
+    }
   },
   [PROFILE_THEN] : {
     summary: `Back in VietNam, I was a radiologist. After graduate from medical school in 2007,
@@ -22,6 +59,15 @@ export const about_me = {
               I was a kid, which is computer science. \\br
 
               I'm also the founder and administrator of one of the first online medical forum in VietNam for
-              seven years, from 2002 to 2009.`
+              seven years, from 2002 to 2009.`,
+    skills: {
+      Radiologist: {
+
+      },
+
+      Webmaster: {
+
+      }
+    }
   }
 }
