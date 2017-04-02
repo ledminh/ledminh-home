@@ -67,17 +67,23 @@ export const about_me = {
                     diseases, like hepatitis, cirrhosis, pancreatitis, and especially appendicitis. My work also
                     includes detecting abdominal cancers in their early stages.`,
 
-          Pelvic: `Although I did not perform as much as abdominal ultrasound examination, I also have three years
+          Pelvic:  `Although I did not perform as much as abdominal ultrasound examination, I also have three years
                     experience in performing pelvic ultrasound examination in Nguyen Trai Hospital. I can give image
                     diagnosis on and detect gynecological diseases like cancer and pre-cancerous diseases of the female
                     reproductive organ, uterine fibroids, endometriosis, and adenomyosis.`,
 
+          Pregnancy: ``,
 
+          Thyroid: ``,
 
+          'Soft Tissue': ``
       },
 
       Webmaster: {
-        'Invision Power Board' : ``
+        'Invision Power Board' : ``,
+        PHP: ``,
+        MySQL: ``,
+        Administrator: ``
       }
     }
   }
