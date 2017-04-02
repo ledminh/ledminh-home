@@ -61,13 +61,31 @@ export const about_me = {
               I'm also the founder and administrator of one of the first online medical forum in VietNam for
               seven years, from 2002 to 2009.`,
     skills: {
-      Radiologist: {
+      Ultrasound: {
+          Abdomen: `I have three years experience in performing abdominal ultrasound examination in Nguyen Trai
+                    Hospital. It includes performing the exam on patients and giving image diagnosis on abdominal
+                    diseases, like hepatitis, cirrhosis, pancreatitis, and especially appendicitis. My work also
+                    includes detecting abdominal cancers in their early stages.`,
+
+          Pelvic: `Although I did not perform as much as abdominal ultrasound examination, I also have three years
+                    experience in performing pelvic ultrasound examination in Nguyen Trai Hospital. I can give image
+                    diagnosis on and detect gynecological diseases like cancer and pre-cancerous diseases of the female
+                    reproductive organ, uterine fibroids, endometriosis, and adenomyosis.`,
+
+
 
       },
 
       Webmaster: {
-
+        'Invision Power Board' : ``
       }
     }
   }
 }
+
+
+/*
+'Perform ultrasonography examination on patients, including abdominal, pelvic, breast, and thyroid ultrasound',
+'Give professional opinion on ultrasound images to clinical physicians',
+'Provide image diagnosis on abdominal, pelvic, breast, and thyroid diseases with the assist of ultrasound'
+*/
