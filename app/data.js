@@ -95,7 +95,7 @@ export const about_me = {
                 Map, Queue, Stack is with C++.`,
 
         Assembly: `Everyone I know agrees that Assembly is hard. But the funny thing is before taking Assembly course in college, I thought that it was the easiest language
-                because there is not much structure in the core language to learn. Only after taking Assembly Language for X86 Processors, I realized how little that I knew.
+                because there are not many structures in the core language to learn. Only after taking Assembly Language for X86 Processors, I realized how little that I knew.
                 It is because there is not much in the core language that makes it so hard. Everything has to be built from scratch. Unfortunately, my experience with Assembly
                 is only confined in the college course I took and in less than 10 programs that I built to finish the course. There's a man who coded for more than 20 years told
                 me that I should study more about it as it would help me to understand the basic of programming. It would benefit me in a long term. I always promise myself I will
@@ -124,18 +124,37 @@ export const about_me = {
                     diagnosis on and detect gynecological diseases like cancer and pre-cancerous diseases of the female
                     reproductive organ, uterine fibroids, endometriosis, and adenomyosis.`,
 
-          Pregnancy: `I did not work with `,
+          Pregnancy: `My speciality was not gyn/obs ultrasound but from time to time, there were still some pregnant women
+                      came to my office for general checkup. Some of them even did not know that they were pregnant. So my main
+                     responsibilities with pregnancy were to detect pregnancy and which trimester they are in, check whether the fetus
+                     is healthy or not base on its heart rate, the condition of amniotic fluid and the uterus etc. `,
 
-          Thyroid: ``,
+          Thyroid: `Many Vietnamese people have thyroid diseases, like hyperthyroidism, hypothyroidism, thyroid cancers, thyroditis, and
+                    thyroid nodules. My job was helping clinical physicians to detect all of those diseases. Around a third of the patients
+                    that came to my office was because of thyroid diseases.`,
 
-          'Soft Tissue': ``
+          'Soft Tissue': `There is not much to say about my experience in soft tissue ultrasound. My job was only to detect some benign soft
+                    tissue tumors, mostly lipoma (fat tumor).`
       },
 
       Webmaster: {
-        'Invision Power Board' : ``,
-        PHP: ``,
-        MySQL: ``,
-        Administrator: ``
+        'Invision Power Board' : `My first experience with IPB can be dated back to 2002 with the version 1.3.1. It was free at that time. After building
+                                  several small forums just for fun, I became more serious and started building an online forum for medical students because I realized
+                                  that we did not have one in Vietnam. I was at my second years in the medical school in Vietnam at that time. Working with IPB is fun.
+                                  It was my first experience with online forum administration. It was about not only content administration but also technical
+                                  maintenance. I learned a lot, from how to work in administrator roles and in moderator roles. I learned how to keep the forum
+                                  run smoothly, encourage members to post new articles, use SEO to improve rank in Google Search, be a judge in many discussions
+                                  and even conflicts between members.`,
+
+        PHP: `I learned PHP indirectly through Invision Power Board. Because I was the only one that was responsible for technical aspect of the forum. I solved all of the
+              technical problems myself without any physical help. My 'technique' was that to search for solutions on the Internet and then copy-paste them into my forum's code.
+              So, my knowledge in PHP was more like know-how rather than know-why.`,
+
+        MySQL: `In medical school, I took courses in medical statistic and was taught using SAS (Statistical Analysis System) to manage,
+                manipulate and work on data. I know it is not the same as MySQL but they have some common aspects and MySQL is much easier.
+                I learned MySQL also indirectly from IPB. The forum uses MySQL to store its database. I was used to work on MySQL to back up,
+                update, restore, and fix problems on data in my forum. It has around 8500 members and more than 47,000 posts. So, it's not small.
+                However, my knowledge in MySQL was also more like know-how rather than know-why.`
       }
     }
   }
