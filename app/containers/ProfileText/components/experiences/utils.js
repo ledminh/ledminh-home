@@ -6,6 +6,8 @@ import H2 from 'containers/ProfileText/h2';
 import Company from './company';
 import Time from './time';
 import Resp from './resp';
+import RespElem from './resp-elem';
+
 const addKeys = (data) => ({data: data, keys: Object.keys(data)});
 
 
@@ -24,6 +26,6 @@ const renderCompany = (company) => (<Company>{company}</Company>);
 const renderTime = (time) => (<Time>...{time}</Time>);
 const renderResponsibilities = (resps) => (<Resp>{renderResp(resps)}</Resp>);
 
-const renderResp = (resps) => resps.map((resp, i) => <p key={i}>{resp}</p>);
+const renderResp = (resps) => resps.map((resp, i) => <RespElem key={i}>{resp}</RespElem>);
 
 export const renderExperiences = compose(renderBlock, addKeys);
