@@ -13,7 +13,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 
-
 import {createStructuredSelector} from 'reselect';
 import {connect} from 'react-redux';
 
@@ -27,7 +26,7 @@ import LeftBar from './components/left_bar';
 import MainContent from './components/main_content';
 import ProfileButtons from 'components/ProfileButtons';
 
-import ProfileText from 'components/ProfileText';
+import ProfileText from 'containers/ProfileText';
 
 import ProfilePicture from 'containers/ProfilePicture';
 
