@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import H1 from './h1';
+import H1 from 'containers/ProfileText/h1';
 
 import {
-    SECTION_SKILLS
+    SECTION_SKILLS,
+    PROFILE_NOW
 } from 'containers/HomePage/constants';
 
+import {about_me} from 'data';
+
+import {renderSkills} from './utils';
 
 const hidden = `
   display: none;
@@ -20,9 +24,10 @@ const Style = styled.div`
     ${(props) => (props.current_section === SECTION_SKILLS)? show : hidden}
 `;
 
-const Skills = ({current_profile, current_section}) => (
+const Skills = ({current_profile, current_section} ) => (
   <Style current_section={current_section}>
-      <H1 current_profile={current_profile}>SKILLS</H1>
+      <H1 background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>SKILLS</H1>
+      {renderSkills(about_me[current_profile].skills)}
   </Style>
 );
 

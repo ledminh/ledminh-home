@@ -12,6 +12,8 @@
 import {fromJS} from 'immutable';
 
 import profile_picture from 'containers/ProfilePicture/reducer';
+import profile_text from 'containers/ProfileText/reducer';
+
 import {combineReducers} from 'redux';
 
 import {
@@ -42,5 +44,6 @@ function home_state(state = initialState, action){
 
 export default combineReducers({
   profile_picture,
+  profile_text,
   home_state
 });

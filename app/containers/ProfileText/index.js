@@ -1,7 +1,9 @@
 import React from 'react';
 
+//import Style from './style';
+
 import Summary from './summary';
-import Skills from './skills';
+import Skills from './components/skills';
 import Experience from './experience';
 import Education from './education';
 
