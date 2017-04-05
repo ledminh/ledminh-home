@@ -83,9 +83,23 @@ export const about_me = {
 
       Others: {
         Java: `This is my favorite language, only after JavaScript, of course. It is because of Java, I think and code everything in class.
-                However, I do not have work experience with Java. I learned Java in college. `,
-        'C++': ``,
-        Assembly: ``
+                However, I do not have work experience with Java. I learned Java in college and coded almost all the problems in the textbook (Introduction
+                to Java programming by Daniel Lang). My first coding experience with GUI is with Java. It is because of Java that I appreciate the power of abstract, inheritant and libraries.
+                JFrame from the swing library makes creating GUI very simple. Before that, the only language that I knew was C++ and I thought creating a
+                window was something very complex and far beyond my knowledge. It was an eye openning experience to me.`,
+
+        'C++': `Around 2014, I learned C++ in college. Two years before that, I'd already self-taught Python. But at the time I took C++, I totally forgot
+                everything about Python as well as basic knowledge of programming. So, it's not wrong to say C++ is the first programming language that
+                I know. And I'm glad about that. Through C++, I learned many fundamental concepts of programming, like variable, bit and byte manipulation,
+                memory, stack and heap, recursion, pointer etc. I also took course in Data Structure using C++. My first experience with LinkedList, Set, BinaryTree,
+                Map, Queue, Stack is with C++.`,
+
+        Assembly: `Everyone I know agrees that Assembly is hard. But the funny thing is before taking Assembly course in college, I thought that it was the easiest language
+                because there are not many structures in the core language to learn. Only after taking Assembly Language for X86 Processors, I realized how little that I knew.
+                It is because there is not much in the core language that makes it so hard. Everything has to be built from scratch. Unfortunately, my experience with Assembly
+                is only confined in the college course I took and in less than 10 programs that I built to finish the course. There's a man who coded for more than 20 years told
+                me that I should study more about it as it would help me to understand the basic of programming. It would benefit me in a long term. I always promise myself I will
+                come back to Assembly some time in the future. But I still do not have enough time for it.`
       }
     }
   },
@@ -110,18 +124,37 @@ export const about_me = {
                     diagnosis on and detect gynecological diseases like cancer and pre-cancerous diseases of the female
                     reproductive organ, uterine fibroids, endometriosis, and adenomyosis.`,
 
-          Pregnancy: ``,
+          Pregnancy: `My speciality was not gyn/obs ultrasound but from time to time, there were still some pregnant women
+                      came to my office for general checkup. Some of them even did not know that they were pregnant. So my main
+                     responsibilities with pregnancy were to detect pregnancy and which trimester they are in, check whether the fetus
+                     is healthy or not base on its heart rate, the condition of amniotic fluid and the uterus etc. `,
 
-          Thyroid: ``,
+          Thyroid: `Many Vietnamese people have thyroid diseases, like hyperthyroidism, hypothyroidism, thyroid cancers, thyroditis, and
+                    thyroid nodules. My job was helping clinical physicians to detect all of those diseases. Around a third of the patients
+                    that came to my office was because of thyroid diseases.`,
 
-          'Soft Tissue': ``
+          'Soft Tissue': `There is not much to say about my experience in soft tissue ultrasound. My job was only to detect some benign soft
+                    tissue tumors, mostly lipoma (fat tumor).`
       },
 
       Webmaster: {
-        'Invision Power Board' : ``,
-        PHP: ``,
-        MySQL: ``,
-        Administrator: ``
+        'Invision Power Board' : `My first experience with IPB can be dated back to 2002 with the version 1.3.1. It was free at that time. After building
+                                  several small forums just for fun, I became more serious and started building an online forum for medical students because I realized
+                                  that we did not have one in Vietnam. I was at my second years in the medical school in Vietnam at that time. Working with IPB is fun.
+                                  It was my first experience with online forum administration. It was about not only content administration but also technical
+                                  maintenance. I learned a lot, from how to work in administrator roles and in moderator roles. I learned how to keep the forum
+                                  run smoothly, encourage members to post new articles, use SEO to improve rank in Google Search, be a judge in many discussions
+                                  and even conflicts between members.`,
+
+        PHP: `I learned PHP indirectly through Invision Power Board. Because I was the only one that was responsible for technical aspect of the forum. I solved all of the
+              technical problems myself without any physical help. My 'technique' was that to search for solutions on the Internet and then copy-paste them into my forum's code.
+              So, my knowledge in PHP was more like know-how rather than know-why.`,
+
+        MySQL: `In medical school, I took courses in medical statistic and was taught using SAS (Statistical Analysis System) to manage,
+                manipulate and work on data. I know it is not the same as MySQL but they have some common aspects and MySQL is much easier.
+                I learned MySQL also indirectly from IPB. The forum uses MySQL to store its database. I was used to work on MySQL to back up,
+                update, restore, and fix problems on data in my forum. It has around 8500 members and more than 47,000 posts. So, it's not small.
+                However, my knowledge in MySQL was also more like know-how rather than know-why.`
       }
     }
   }
