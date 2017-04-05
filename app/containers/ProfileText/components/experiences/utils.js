@@ -1,0 +1,29 @@
+import React from 'react';
+import compose from 'utils/compose';
+
+import H2 from 'containers/ProfileText/h2';
+
+import Company from './company';
+import Time from './time';
+import Resp from './resp';
+const addKeys = (data) => ({data: data, keys: Object.keys(data)});
+
+
+
+
+const renderBlock = (dataKeyObj) => dataKeyObj.keys.map((exp, i) => (<div key={i}>
+                                                                        {renderTitle(exp)}
+                                                                        {renderCompany(dataKeyObj.data[exp].company)}
+                                                                        {renderTime(dataKeyObj.data[exp].time)}
+                                                                        {renderResponsibilities(dataKeyObj.data[exp].responsibilities)}
+                                                                     </div>));
+
+
+const renderTitle = (title) => (<H2>{title.toUpperCase()}</H2>);
+const renderCompany = (company) => (<Company>{company}</Company>);
+const renderTime = (time) => (<Time>...{time}</Time>);
+const renderResponsibilities = (resps) => (<Resp>{renderResp(resps)}</Resp>);
+
+const renderResp = (resps) => resps.map((resp, i) => <p key={i}>{resp}</p>);
+
+export const renderExperiences = compose(renderBlock, addKeys);

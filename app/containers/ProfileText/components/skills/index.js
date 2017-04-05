@@ -28,7 +28,7 @@ const Style = styled.div`
 const Skills = ({current_profile, current_section} ) => (
   <Style current_section={current_section}>
       <H1 background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>SKILLS</H1>
-      <Subtitle background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>SKILLS</Subtitle>
+      <Subtitle>SKILLS</Subtitle>
       {renderSkills(about_me[current_profile].skills)}
   </Style>
 );

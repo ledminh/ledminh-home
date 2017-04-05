@@ -101,6 +101,19 @@ export const about_me = {
                 me that I should study more about it as it would help me to understand the basic of programming. It would benefit me in a long term. I always promise myself I will
                 come back to Assembly some time in the future. But I still do not have enough time for it.`
       }
+    },
+
+    experiences : {
+      'student assistant' : {
+        company: `Adapted Physical Education Department of De Anza College`,
+        time: `from May 2014 to Dec 2016`,
+        responsibilities: [
+          `Works with individuals with disabilities conducting range of motion, resistance training, and cardiovascular training.`,
+          `Provide stretching and massage to individuals with disabilities.`,
+          `Giving instruction in how to use gym machines.`,
+          `Assist individuals with disabilities when they use gym machines.`
+        ]
+      }
     }
   },
   [PROFILE_THEN] : {
@@ -156,13 +169,38 @@ export const about_me = {
                 update, restore, and fix problems on data in my forum. It has around 8500 members and more than 47,000 posts. So, it's not small.
                 However, my knowledge in MySQL was also more like know-how rather than know-why.`
       }
+    },
+
+    experiences : {
+      'Radiologist' : {
+        company: `Nguyen Trai Hospital`,
+        time: `from Jan 2009 to Dec 2012`,
+        responsibilities: [
+          'Perform ultrasonography examination on patients, including abdominal, pelvic, breast, and thyroid ultrasound',
+          'Give professional opinion on ultrasound images to clinical physicians',
+          'Provide image diagnosis on abdominal, pelvic, breast, and thyroid diseases with the assist of ultrasound'
+        ]
+      },
+
+      'Founder and Administrator' : {
+        company: `www.nhipcauykhoa.net`,
+        time: `from Jan 2002 to Dec 2009`,
+        responsibilities: [
+          `Build an online forum of 8500 members for Vietnamese medical students using Invision Power Board`,
+          `Writing articles on medical and general topics to keep the forum alive.`,
+          `Create and encourage members to join discussions in various topics, including medical and general topics.`,
+          `Main responsible in recruiting members for Administration Board, including administrators, moderators, and consultants.`,
+          `Main responsible in forum technical maintenance, including back up and restore database in MySQL, fix technical issues, and install
+          new features.`,
+          `Propose, approve, and regulate forum policy.`,
+          `Organize and lead forum's offline activities, especially charity activities.`
+        ]
+      }
     }
   }
 }
 
 
 /*
-'Perform ultrasonography examination on patients, including abdominal, pelvic, breast, and thyroid ultrasound',
-'Give professional opinion on ultrasound images to clinical physicians',
-'Provide image diagnosis on abdominal, pelvic, breast, and thyroid diseases with the assist of ultrasound'
+
 */
