@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import H1 from 'containers/ProfileText/h1';
+import Subtitle from './subtitle';
 
 import {
     SECTION_SKILLS,
@@ -27,6 +28,7 @@ const Style = styled.div`
 const Skills = ({current_profile, current_section} ) => (
   <Style current_section={current_section}>
       <H1 background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>SKILLS</H1>
+      <Subtitle background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>SKILLS</Subtitle>
       {renderSkills(about_me[current_profile].skills)}
   </Style>
 );
