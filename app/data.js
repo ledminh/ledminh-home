@@ -69,18 +69,21 @@ export const about_me = {
             it's convenient. But I know using a giant framework to only move a div from one place to another is ridiculous. That's why recently, I tried to
             use basic JavaScript for those tasks. I'll learn more about D3 and its capacity.`,
 
-        jQuery: `So far, I only used jQuery for 6 or 7 months in total when following freeCodeCamp. And then, after learning React and falling in love with it,
-                I abandoned jQuery altogether. I know it's not fair for jQuery. But I don't want to use two frameworks in one app. It's overkill. And moreover,
-                I can't see what jQuery can do that React and basic JavaScript can not do.`,
+        jQuery: `So far, I only used jQuery for 6 or 7 months in total when following freeCodeCamp. And then, after learning React and
+                falling in love with it, I abandoned jQuery altogether. I know it's not fair for jQuery. But I don't want to use two
+                frameworks in one app. It's overkill. And moreover, I can't see what jQuery can do that React and basic JavaScript can not do.`,
 
-        SCSS: `I had worked with SCSS for quite a long time and feel very comfortable with it. However, since the time I knew about styled-components, I have
-              never came back to SCSS.`,
+        SCSS: `I had worked with SCSS for quite a long time and feel very comfortable with it. However, since the time I knew about
+                styled-components, I have never came back to SCSS.`,
 
-        'Express.js': ``
+        'Express.js': `I have used Express to build the backend of several apps. They are not too big but only small API servers. My
+                      experience with Express so far just involves search and apply. In other word, I search and then read enough to solve
+                      the problem at hand. I haven't read or dig deeper into it.`
       },
 
       Others: {
-        Java: ``,
+        Java: `This is my favorite language, only after JavaScript, of course. It is because of Java, I think and code everything in class.
+                However, I do not have work experience with Java. I learned Java in college. `,
         'C++': ``,
         Assembly: ``
       }
