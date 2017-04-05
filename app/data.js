@@ -83,9 +83,23 @@ export const about_me = {
 
       Others: {
         Java: `This is my favorite language, only after JavaScript, of course. It is because of Java, I think and code everything in class.
-                However, I do not have work experience with Java. I learned Java in college. `,
-        'C++': ``,
-        Assembly: ``
+                However, I do not have work experience with Java. I learned Java in college and coded almost all the problems in the textbook (Introduction
+                to Java programming by Daniel Lang). My first coding experience with GUI is with Java. It is because of Java that I appreciate the power of abstract, inheritant and libraries.
+                JFrame from the swing library makes creating GUI very simple. Before that, the only language that I knew was C++ and I thought creating a
+                window was something very complex and far beyond my knowledge. It was an eye openning experience to me.`,
+
+        'C++': `Around 2014, I learned C++ in college. Two years before that, I'd already self-taught Python. But at the time I took C++, I totally forgot
+                everything about Python as well as basic knowledge of programming. So, it's not wrong to say C++ is the first programming language that
+                I know. And I'm glad about that. Through C++, I learned many fundamental concepts of programming, like variable, bit and byte manipulation,
+                memory, stack and heap, recursion, pointer etc. I also took course in Data Structure using C++. My first experience with LinkedList, Set, BinaryTree,
+                Map, Queue, Stack is with C++.`,
+
+        Assembly: `Everyone I know agrees that Assembly is hard. But the funny thing is before taking Assembly course in college, I thought that it was the easiest language
+                because there is not much structure in the core language to learn. Only after taking Assembly Language for X86 Processors, I realized how little that I knew.
+                It is because there is not much in the core language that makes it so hard. Everything has to be built from scratch. Unfortunately, my experience with Assembly
+                is only confined in the college course I took and in less than 10 programs that I built to finish the course. There's a man who coded for more than 20 years told
+                me that I should study more about it as it would help me to understand the basic of programming. It would benefit me in a long term. I always promise myself I will
+                come back to Assembly some time in the future. But I still do not have enough time for it.`
       }
     }
   },
@@ -110,7 +124,7 @@ export const about_me = {
                     diagnosis on and detect gynecological diseases like cancer and pre-cancerous diseases of the female
                     reproductive organ, uterine fibroids, endometriosis, and adenomyosis.`,
 
-          Pregnancy: ``,
+          Pregnancy: `I did not work with `,
 
           Thyroid: ``,
 
