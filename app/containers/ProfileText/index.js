@@ -5,7 +5,7 @@ import React from 'react';
 import Summary from './summary';
 import Skills from './components/skills';
 import Experience from './components/experiences';
-import Education from './education';
+import Education from './components/education';
 
 class ProfileText extends React.PureComponent {
   render(){
