@@ -114,7 +114,26 @@ export const about_me = {
           `Assist individuals with disabilities when they use gym machines.`
         ]
       }
+    },
+
+    education : {
+      "de anza college": {
+        time: `from 01/2014 to 04/2017`,
+        degrees: [
+          `Associate's Degree on Computer Science`
+        ]
+      },
+
+      'Free Code Camp' : {
+        time: 'from 06/2015 to 12/2016',
+        degrees : {
+          'Certificate of Accomplishment of Front End Development': `https://www.freecodecamp.com/ledminh/front-end-certification`,
+          'Certificate of Accomplishment of Data Visualization' : `https://www.freecodecamp.com/ledminh/data-visualization-certification`
+        }
+
+      }
     }
+
   },
   [PROFILE_THEN] : {
     summary: `Back in VietNam, I was a radiologist. After graduate from medical school in 2007,
@@ -125,6 +144,7 @@ export const about_me = {
 
               I'm also the founder and administrator of one of the first online medical forum in VietNam for
               seven years, from 2002 to 2009.`,
+
     skills: {
       Ultrasound: {
           Abdomen: `I have three years experience in performing abdominal ultrasound examination in Nguyen Trai
@@ -195,6 +215,29 @@ export const about_me = {
           `Propose, approve, and regulate forum policy.`,
           `Organize and lead forum's offline activities, especially charity activities.`
         ]
+      }
+    },
+
+    education : {
+      'Pham Ngoc Thach Medical School' : {
+          time: `from 2007 to 2008`,
+          degrees: [
+            'Ultrasonography Certificate, Abdomen Ultrasound'
+          ]
+      },
+
+      'Pham Ngoc Thach Medical School' : {
+          time: `from 2000 to 2006`,
+          degrees : [
+            `Doctor of Medicine (M.D.), Medicine`
+          ]
+      },
+
+      'Nguyen Thuong Hien High School' : {
+          time: `from 1997 to 2000`,
+          degrees : [
+            `High School Diploma`
+          ]
       }
     }
   }

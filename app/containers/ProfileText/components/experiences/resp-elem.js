@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {createStructuredSelector} from 'reselect';
+import {connect} from 'react-redux';
+
+import {makeSelectCurrentProfile} from 'containers/HomePage/selectors';
+
+import {
+  PROFILE_NOW
+} from 'containers/HomePage/constants';
+
 const Style = styled.div`
   position: relative;
   margin-bottom: 15px;
@@ -9,7 +18,7 @@ const Style = styled.div`
     box-shadow: 0px 0px 20px;
 
     & > div {
-      background-color: #c3cee0;
+      background-color: ${props => props.current_profile === PROFILE_NOW ? `#bfbfbf` : `#c3cee0`};
     }
   }
 
@@ -30,11 +39,19 @@ const Inner = styled.div`
   margin-left: 27px;
   padding: 5px;
 `;
-const RespElem = ({children}) => (
-  <Style>
+const RespElem = ({children, current_profile}) => (
+  <Style current_profile={current_profile}>
       <Bullet />
       <Inner>{children}</Inner>
   </Style>
 );
 
-export default RespElem;
+RespElem.propTypes = {
+  current_profile: React.PropTypes.string
+}
+
+const mapStatetoProps = createStructuredSelector({
+  current_profile : makeSelectCurrentProfile()
+})
+
+export default connect(mapStatetoProps)(RespElem);
