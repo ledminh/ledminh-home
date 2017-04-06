@@ -8,6 +8,11 @@ import {
     PROFILE_NOW
 } from 'containers/HomePage/constants';
 
+import {about_me} from 'data';
+
+import {renderEducation} from './utils';
+
+
 const hidden = `
   display: none;
 `;
@@ -24,6 +29,7 @@ const Style = styled.div`
 const Education = ({current_profile, current_section}) => (
   <Style current_section={current_section}>
       <H1 background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>EDUCATION</H1>
+      {renderEducation(about_me[current_profile].education)}
   </Style>
 );
 

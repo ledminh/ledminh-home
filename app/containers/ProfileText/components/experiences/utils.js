@@ -2,9 +2,10 @@ import React from 'react';
 import compose from 'utils/compose';
 
 import H2 from 'containers/ProfileText/h2';
+import Time from 'containers/ProfileText/time';
 
 import Company from './company';
-import Time from './time';
+
 import Resp from './resp';
 import RespElem from './resp-elem';
 

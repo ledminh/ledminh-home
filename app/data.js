@@ -116,15 +116,18 @@ export const about_me = {
       }
     },
 
-    education : {
-      "de anza college": {
+    education : [
+      {
+        school: "de anza college",
         time: `from 01/2014 to 04/2017`,
         degrees: [
           `Associate's Degree on Computer Science`
         ]
+
       },
 
-      'Free Code Camp' : {
+      {
+        school: 'Free Code Camp',
         time: 'from 06/2015 to 12/2016',
         degrees : {
           'Certificate of Accomplishment of Front End Development': `https://www.freecodecamp.com/ledminh/front-end-certification`,
@@ -132,7 +135,7 @@ export const about_me = {
         }
 
       }
-    }
+    ]
 
   },
   [PROFILE_THEN] : {
@@ -218,28 +221,31 @@ export const about_me = {
       }
     },
 
-    education : {
-      'Pham Ngoc Thach Medical School' : {
-          time: `from 2007 to 2008`,
-          degrees: [
+    education : [
+      {
+        school: 'Pham Ngoc Thach Medical School',
+        time: `from 2007 to 2008`,
+        degrees: [
             'Ultrasonography Certificate, Abdomen Ultrasound'
           ]
       },
 
-      'Pham Ngoc Thach Medical School' : {
-          time: `from 2000 to 2006`,
-          degrees : [
+      {
+        school: 'Pham Ngoc Thach Medical School',
+        time: `from 2000 to 2006`,
+        degrees : [
             `Doctor of Medicine (M.D.), Medicine`
           ]
       },
 
-      'Nguyen Thuong Hien High School' : {
-          time: `from 1997 to 2000`,
-          degrees : [
+      {
+        school: 'Nguyen Thuong Hien High School',
+        time: `from 1997 to 2000`,
+        degrees : [
             `High School Diploma`
-          ]
+        ]
       }
-    }
+    ]
   }
 }
 
