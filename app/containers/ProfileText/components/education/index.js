@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import H1 from 'containers/ProfileText/h1';
+
 import {
-    SECTION_EDUCATION
+    SECTION_EDUCATION,
+    PROFILE_NOW
 } from 'containers/HomePage/constants';
 
 const hidden = `
@@ -20,7 +23,7 @@ const Style = styled.div`
 
 const Education = ({current_profile, current_section}) => (
   <Style current_section={current_section}>
-      Education
+      <H1 background={(current_profile === PROFILE_NOW)? '#494949' : '#3f5a84'}>EDUCATION</H1>
   </Style>
 );
 
