@@ -43,7 +43,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
           <Helmet
             title="::: LEDMINH HOME :::"
             meta={[
-              { name: 'description', content: 'My Portfolio Website' },
+              { name: 'Home', content: 'My Portfolio Website' },
               { name: 'keywords', content: 'React, Redux, Node.js, JavaScript, mongoDB, freeCodeCamp, Express.js'},
               { name: 'author', content: 'Minh Le'}
             ]}
