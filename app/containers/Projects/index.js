@@ -9,10 +9,21 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import makeSelectProjects from './selectors';
+import {dataRequest} from './actions';
 
 import ProjectBox from './components/project-box';
 
+import {renderProjectBoxs} from './utils';
+
+import {
+  DATA_INITIAL
+} from './constants';
+
 export class Projects extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  componentWillMount(){
+    this.props.initData();
+  }
+
   render() {
     return (
       <div>
@@ -24,7 +35,7 @@ export class Projects extends React.PureComponent { // eslint-disable-line react
             { name: 'author', content: 'Minh Le'}
           ]}
         />
-        <ProjectBox />
+        {renderProjectBoxs(this.props.projects)}
       </div>
     );
   }
@@ -35,12 +46,13 @@ Projects.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  Projects: makeSelectProjects(),
+  projects: makeSelectProjects(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
+    initData: () => dispatch(dataRequest(DATA_INITIAL))
   };
 }
 

@@ -16,10 +16,11 @@ const selectProjectsDomain = () => (state) => state.get('projects');
 
 const makeSelectProjects = () => createSelector(
   selectProjectsDomain(),
-  (substate) => substate.toJS()
+  (projects) => projects.toJS()
 );
 
 export default makeSelectProjects;
+
 export {
   selectProjectsDomain,
 };
