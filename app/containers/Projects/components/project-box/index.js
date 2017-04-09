@@ -110,7 +110,7 @@ const ProjectBox = ({data, dispatch}) => (
             <Category css_state={data.css_state}>{data.category.toUpperCase()}</Category>
             <Title css_state={data.css_state}>{data.title.toUpperCase()}</Title>
             <Description css_state={data.css_state} text={data.description} />
-            <Buttons css_state={data.css_state} links={data.links}/>
+            <Buttons css_state={data.css_state} links={data.links} title={data.title}/>
       </Style>
   </Wrapper>
 );

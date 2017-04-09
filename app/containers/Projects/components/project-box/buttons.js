@@ -1,9 +1,23 @@
+/**********************
+* IMPORT
+***********************/
 import React from 'react';
 import styled from 'styled-components';
 
+import { createStructuredSelector } from 'reselect';
+import { connect } from 'react-redux';
+
 import {
+  PROJECT_BOX__NORMAL,
   PROJECT_BOX__LARGE
 } from 'containers/Projects/constants';
+
+import {change_CSS_State} from 'containers/Projects/actions';
+
+
+/**********************
+* STYLES
+***********************/
 
 const Wrapper = styled.div`
   position: relative;
@@ -40,14 +54,44 @@ const Button = styled.div`
 `;
 
 
-const Buttons = ({css_state, links}) => (
-  <Wrapper css_state={css_state}>
-    <Content>
-        <Button source onClick={() => open(links.source_code)}>SOURCE CODE</Button>
-        <Button link onClick={() => open(links.demo)}>LINK/DEMO</Button>
-        <Button close >CLOSE</Button>
-    </Content>
-  </Wrapper>
-);
+/**********************
+* COMPONENTS
+***********************/
 
-export default Buttons;
+export class Buttons extends React.PureComponent {
+  constructor(){
+    super();
+
+    this.buttonOnclick = this.buttonOnclick.bind(this);
+  }
+
+  buttonOnclick(e){
+    e.stopPropagation();
+    this.props.dispatch(change_CSS_State(PROJECT_BOX__NORMAL, this.props.title));
+  }
+
+  render(){
+    return (
+      <Wrapper css_state={this.props.css_state}>
+        <Content>
+            <Button source onClick={() => open(this.props.links.source_code)}>SOURCE CODE</Button>
+            <Button link onClick={() => open(this.props.links.demo)}>LINK/DEMO</Button>
+            <Button close onClick={this.buttonOnclick}>CLOSE</Button>
+        </Content>
+      </Wrapper>
+    );
+  }
+}
+
+
+const mapStateToProps = createStructuredSelector({
+
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buttons);

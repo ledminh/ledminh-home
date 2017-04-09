@@ -265,7 +265,7 @@ export const projects = [
     },
     links: {
       source_code: 'https://www.github.com',
-      demo: 'https://wwww.ledminh.com'
+      demo: 'https://www.ledminh.com'
     }
 
   },
