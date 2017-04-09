@@ -262,7 +262,12 @@ export const projects = [
             A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
             A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
             A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
+    },
+    links: {
+      source_code: 'https://www.github.com',
+      demo: 'https://wwww.ledminh.com'
     }
+
   },
 
   {

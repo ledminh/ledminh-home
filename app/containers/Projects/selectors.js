@@ -16,11 +16,17 @@ const selectProjectsDomain = () => (state) => state.get('projects');
 
 const makeSelectProjects = () => createSelector(
   selectProjectsDomain(),
-  (projects) => projects.toJS()
+  (data) => data.get('projects').toJS()
+);
+
+const makeSelectCurrentLarge = () => createSelector(
+  selectProjectsDomain(),
+  (data) => data.get('current-large')
 );
 
 export default makeSelectProjects;
 
 export {
   selectProjectsDomain,
+  makeSelectCurrentLarge
 };

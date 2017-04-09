@@ -4,11 +4,15 @@ import {
   DATA_REQUEST,
   DATA_INITIAL,
   DATA_CAT,
-  PROJECT_BOX__NORMAL
+  PROJECT_BOX__NORMAL,
+  PROJECT_BOX__LARGE,
+
+  CHANGE_PROJECT_CSS_STATE
 } from './constants';
 
 
-import {loadData} from './actions';
+import {makeSelectCurrentLarge} from './selectors';
+import {loadData, change_CSS_State, changeCurrentLarge} from './actions';
 
 import {projects} from 'data';
 
@@ -47,8 +51,26 @@ function* getDataCat(category){
     }, {});
 }
 
+function* manageLargeBox(){
+  while(true){
+    let action = yield take(CHANGE_PROJECT_CSS_STATE);
+
+
+    if(action.state === PROJECT_BOX__LARGE){
+        let currentLarge = yield select(makeSelectCurrentLarge());
+
+        if(currentLarge !== `` && currentLarge !== action.title)
+            yield put(change_CSS_State(PROJECT_BOX__NORMAL, currentLarge));
+
+        yield put(changeCurrentLarge(action.title));
+
+
+    }
+  }
+}
 
 // All sagas to be loaded
 export default [
   loadDataSaga,
+  manageLargeBox
 ];
