@@ -24,6 +24,7 @@ const Wrapper_large = `
 `;
 
 const Wrapper = styled.div`
+    text-align: left;
     padding: 5px;
     ${props => (props.css_state === PROJECT_BOX__NORMAL)? Wrapper_normal : ``}
     ${props => (props.css_state === PROJECT_BOX__HOVER)? Wrapper_hover : ``}

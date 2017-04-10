@@ -26,17 +26,18 @@ export function loadData(data){
   }
 }
 
-export function change_CSS_State(state, title){
+export function change_CSS_State(state, id, pageY){
   return {
     type: CHANGE_PROJECT_CSS_STATE,
     state,
-    title
+    id,
+    pageY
   }
 }
 
-export function changeCurrentLarge(title){
+export function changeCurrentLarge(id){
   return {
     type: CHANGE_CURRENT_LARGE,
-    title
+    id
   }
 }

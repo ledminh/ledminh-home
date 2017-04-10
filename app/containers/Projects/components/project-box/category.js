@@ -11,6 +11,8 @@ const Style = styled.div`
   padding : 5px 0px 5px 10px;
   font-size: 20px;
   font-weight: bold;
+  
+  text-align: left;
 `;
 
 const Category = ({children, css_state}) => (

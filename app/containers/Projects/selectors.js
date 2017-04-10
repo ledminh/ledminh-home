@@ -21,7 +21,7 @@ const makeSelectProjects = () => createSelector(
 
 const makeSelectCurrentLarge = () => createSelector(
   selectProjectsDomain(),
-  (data) => data.get('current-large')
+  (data) => data.get('current_large')
 );
 
 export default makeSelectProjects;

@@ -2,7 +2,7 @@ const messages = {
   buttons: [
     {
         title: "Home",
-        link: "/home"
+        link: "/"
     },
 
     {

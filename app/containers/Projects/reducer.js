@@ -12,8 +12,8 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  projects: {},
-  'current-large': ``
+  projects: [],
+  current_large: ``
 });
 
 function projectsReducer(state = initialState, action) {
@@ -23,11 +23,12 @@ function projectsReducer(state = initialState, action) {
                  .mergeDeep({projects : action.data});
 
     case CHANGE_PROJECT_CSS_STATE:
+      const index = state.get('projects').findIndex(project => project.get('id') === action.id);
       return state
-                .setIn(['projects', action.title, 'css_state'], action.state);
+                .setIn(['projects', index, 'css_state'], action.state);
     case CHANGE_CURRENT_LARGE:
       return state
-                .set('current-large', action.title);
+                .set('current_large', action.id);
     default:
       return state;
   }

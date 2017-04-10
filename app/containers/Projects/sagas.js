@@ -1,5 +1,7 @@
 import { take, call, put, fork, select, cancel, takeLatest } from 'redux-saga/effects';
 
+import cuid from 'cuid';
+
 import {
   DATA_REQUEST,
   DATA_INITIAL,
@@ -36,19 +38,14 @@ export function* loadDataSaga() {
 }
 
 function* getDataInitial(){
-    return projects.reduce((result, project) => {
-          result[project.title] = {...project, css_state: PROJECT_BOX__NORMAL};
-          return result;
-    }, {});
+    return projects.map((project, i) => ({...project, css_state: PROJECT_BOX__NORMAL, id: cuid()}));
 }
 
 function* getDataCat(category){
 
     let thisProjects = projects.filter(project => project.category === category);
 
-    return thisProjects.reduce((result, project) => {
-        result[project.title] = {...project, css_state: PROJECT_BOX__NORMAL};
-    }, {});
+    return thisProjects.map((project, i) => ({...project, css_state: PROJECT_BOX__NORMAL}));
 }
 
 function* manageLargeBox(){
@@ -57,12 +54,12 @@ function* manageLargeBox(){
 
 
     if(action.state === PROJECT_BOX__LARGE){
+        //Set previousLagre to normal (if any)
         let currentLarge = yield select(makeSelectCurrentLarge());
-
-        if(currentLarge !== `` && currentLarge !== action.title)
+        if(currentLarge !== `` && currentLarge !== action.id)
             yield put(change_CSS_State(PROJECT_BOX__NORMAL, currentLarge));
 
-        yield put(changeCurrentLarge(action.title));
+        yield put(changeCurrentLarge(action.id));
 
 
     }

@@ -67,7 +67,7 @@ export class Buttons extends React.PureComponent {
 
   buttonOnclick(e){
     e.stopPropagation();
-    this.props.dispatch(change_CSS_State(PROJECT_BOX__NORMAL, this.props.title));
+    this.props.dispatch(change_CSS_State(PROJECT_BOX__NORMAL, this.props.id));
   }
 
   render(){
