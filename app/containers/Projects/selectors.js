@@ -16,7 +16,7 @@ const selectProjectsDomain = () => (state) => state.get('projects');
 
 const makeSelectProjects = () => createSelector(
   selectProjectsDomain(),
-  (data) => data.get('projects').toJS()
+  (data) => data.get('projects').toJS().filter((project) => project.show)
 );
 
 const makeSelectCurrentLarge = () => createSelector(
@@ -24,9 +24,21 @@ const makeSelectCurrentLarge = () => createSelector(
   (data) => data.get('current_large')
 );
 
+const makeSelectCategories = () => createSelector(
+  selectProjectsDomain(),
+  (data) => data.get('projects').toJS().reduce((result,project) => ({...result, [project.category] : project.id}), {})
+);
+
+const makeSelectCategoriesDisplay = () => createSelector(
+  selectProjectsDomain(),
+  (data) => data.get('category_display')
+);
+
 export default makeSelectProjects;
 
 export {
   selectProjectsDomain,
-  makeSelectCurrentLarge
+  makeSelectCurrentLarge,
+  makeSelectCategories,
+  makeSelectCategoriesDisplay
 };

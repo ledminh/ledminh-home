@@ -8,7 +8,9 @@ import {
   DATA_REQUEST,
   LOAD_DATA,
   CHANGE_PROJECT_CSS_STATE,
-  CHANGE_CURRENT_LARGE
+  CHANGE_CURRENT_LARGE,
+  CHANGE_CATEGORY,
+  CHANGE_CATEGORY_DISPLAY
 } from './constants';
 
 export function dataRequest(request_type, category) {
@@ -39,5 +41,18 @@ export function changeCurrentLarge(id){
   return {
     type: CHANGE_CURRENT_LARGE,
     id
+  }
+}
+
+export function changeCategory(category){
+  return {
+    type: CHANGE_CATEGORY,
+    category
+  }
+}
+
+export function changeCategoryDisplay(){
+  return {
+    type: CHANGE_CATEGORY_DISPLAY
   }
 }

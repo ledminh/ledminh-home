@@ -9,7 +9,8 @@ import {
   PROJECT_BOX__NORMAL,
   PROJECT_BOX__LARGE,
 
-  CHANGE_PROJECT_CSS_STATE
+  CHANGE_PROJECT_CSS_STATE,
+  CHANGE_CATEGORY
 } from './constants';
 
 
@@ -27,18 +28,17 @@ export function* loadDataSaga() {
       switch(dataRequest.request_type){
         case DATA_INITIAL:
           data = yield getDataInitial();
-          break;
-        case DATA_CAT:
-          data = yield getDataCat(dataRequest.category);
+
           break;
       }
 
       yield put(loadData(data));
+
     }
 }
 
 function* getDataInitial(){
-    return projects.map((project, i) => ({...project, css_state: PROJECT_BOX__NORMAL, id: cuid()}));
+    return projects.map((project, i) => ({...project, css_state: PROJECT_BOX__NORMAL, id: cuid(), show: true}));
 }
 
 function* getDataCat(category){
@@ -65,6 +65,7 @@ function* manageLargeBox(){
     }
   }
 }
+
 
 // All sagas to be loaded
 export default [
