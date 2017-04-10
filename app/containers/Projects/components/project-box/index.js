@@ -25,7 +25,7 @@ const Wrapper_normal = `
     display: inline-block;
     width: 210px;
     height: ${250*210/200}px;
-    margin: 50px 10px 10px 10px;
+    margin: 50px 15px 10px 15px;
 
 `;
 

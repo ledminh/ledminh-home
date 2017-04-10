@@ -256,469 +256,66 @@ export const projects = [
     title: "Tic tac toe",
     description: {
       short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
+      full: `This is the first complex game I built using JavaScript. The graphic part was built entirely
+            in HTML and CSS while the "core machine" was built in JavaScript, jQuery to be exact. Even though
+            I had built many versions of this game using other languages, like C++ and Java, at school, the interesting
+            thing about this project is you can never win the computer on this one. The secret behind it is the MiniMax algorithm.`
     },
     links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
+      source_code: 'http://codepen.io/ledminh/pen/XdWNwz',
+      demo: 'http://codepen.io/ledminh/full/XdWNwz/'
     }
 
   },
 
   {
-    category: "Website",
-    title: "ESL Website",
+    category: "utility",
+    title: "Simple Calc",
     description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
+      short: "A simple calculator built on jQuery",
+      full: `This is one of my first projects built on JavaScript. I used HTML and CSS for graphic, Bootstrap for column alignment,
+      and jQuery for the "core machine"`
     },
     links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
+      source_code: 'http://codepen.io/ledminh/pen/gPgMVV',
+      demo: 'http://codepen.io/ledminh/full/gPgMVV'
     }
 
   },
 
   {
-    category: "Website",
-    title: "ESL Website",
+    category: "utility",
+    title: "Wiki Search",
     description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
+      short: "A small search engine for Wikipedia",
+      full: `This is one of my first projects on JavaScript. There's not much to say about its functionality. You type in the keyword
+      that you want to search, the autocomplete function will suggest you some results on the way, and the results will be shown after you
+      hit the Enter key or click the Search button. If you're more adventurous, click on the "Random Article" button to read a random topic. \\br
 
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
+      However, this is also the first project that I'm exposured to JSON and AJAX, which is the core feature of JavaScript and Web Tech nowadays.`
     },
     links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
+      source_code: 'http://codepen.io/ledminh/pen/eJdLOr/',
+      demo: 'http://codepen.io/ledminh/full/eJdLOr/'
     }
 
   },
 
   {
-    category: "Website",
-    title: "ESL Website",
+    category: "utility",
+    title: "Porm Clock",
     description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
+      short: "An online Timer built using jQuery",
+      full: `The idea of Pormodoro Clock is to set up how many minutes you're gonna work before taking a break and
+            then how many minutes you need for the break before you go back to work. This is one of my first apps in
+            JavaScript, so it's very simple. I used Bootstrap for the progress bar and other graphic items of the app.
+            I used jQuery to manipulate the DOM elements.`
     },
     links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
+      source_code: 'http://codepen.io/ledminh/pen/rxxdYP/',
+      demo: 'http://codepen.io/ledminh/full/rxxdYP/'
     }
 
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "game",
-    title: "Tic tac toe",
-    description: {
-      short: "A game that you can never win",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    },
-    links: {
-      source_code: 'https://www.github.com',
-      demo: 'https://www.ledminh.com'
-    }
-
-  },
-
-  {
-    category: "Website",
-    title: "ESL Website",
-    description: {
-      short: "An interactive library for ELS learner",
-      full: `A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
-  },
-
-  {
-    category: "Graph",
-    title: "Heat Graph",
-    description: {
-      short: "A graph that you can never see",
-      full: `A game that you can never see. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win
-            A game that you can never win. A game that you can never win. A game that you can never win. A game that you can never win`
-    }
   },
 
 ]
