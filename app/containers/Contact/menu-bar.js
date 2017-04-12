@@ -16,7 +16,7 @@ const BOTTOM = 50,
 /****************
 * FUNCTIONS
 *****************/
-const onClick = (name, buttonOnClick) => (e) =>  buttonOnClick(name, e.target.offsetLeft + 30);
+const onClick = (index, buttonOnClick) => (e) =>  buttonOnClick(index, e.target.offsetLeft + 30);
 
 /****************
 * COMPONENTS
@@ -78,14 +78,14 @@ const Indicator = styled.div`
   background-color: rgba(209, 209, 209, .7);
 `;
 
-const MenuBar = ({buttonOnClick,current_clicked, indicator_left}) => (
+const MenuBar = ({buttonOnClick, indicator_left}) => (
   <div>
       <Frame>
         <Content>
-          <Button onClick={onClick(EMAIL, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/email.svg"/></Button>
-          <Button onClick={onClick(LINKEDIN, buttonOnClick)}><img src="https://www.ledminh.com/imgs/linkedin.png"/></Button>
-          <Button onClick={onClick(GITHUB, buttonOnClick)}><img src="https://www.ledminh.com/imgs/github.png"/></Button>
-          <Button onClick={onClick(FREECODECAMP, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/free-code-camp.jpg"/></Button>
+          <Button onClick={onClick(0, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/email.svg"/></Button>
+          <Button onClick={onClick(1, buttonOnClick)}><img src="https://www.ledminh.com/imgs/linkedin.png"/></Button>
+          <Button onClick={onClick(2, buttonOnClick)}><img src="https://www.ledminh.com/imgs/github.png"/></Button>
+          <Button onClick={onClick(3, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/free-code-camp.jpg"/></Button>
         </Content>
         <Indicator left={indicator_left}/>
       </Frame>

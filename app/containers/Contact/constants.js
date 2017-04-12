@@ -6,7 +6,5 @@
 
 export const CLICK = 'app/Contact/CLICK';
 
-export const EMAIL = 'app/Contact/EMAIL';
-export const LINKEDIN = 'app/Contact/LINKEDIN';
-export const GITHUB = 'app/Contact/GITHUB';
-export const FREECODECAMP = 'app/Contact/FREECODECAMP';
+export const CHANGE_INDICATOR_LEFT = 'app/Contact/CHANGE_INDICATOR_LEFT';
+export const CHANGE_CURRENT_INDEX = 'app/Contact/CHANGE_CURRENT_INDEX';

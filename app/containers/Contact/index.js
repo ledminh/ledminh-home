@@ -9,13 +9,18 @@ import styled from 'styled-components';
 
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+
 import { createStructuredSelector } from 'reselect';
-import {makeSelectCurrentClicked, makeSelectIndicatorLeft} from './selectors';
+import {makeSelectIndicatorLeft,
+        makeSelectContactData,
+        makeSelectCurrentIndex} from './selectors';
+
 
 import {click} from './actions';
 
 import MenuBar from './menu-bar';
 
+import Screen from './screen';
 
 const Frame = styled.div`
   position: fixed;
@@ -41,9 +46,9 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
           ]}
         />
         <Frame>
+            <Screen data={this.props.contact_data.slice(0, this.props.current_index + 1)}/>
             <MenuBar buttonOnClick={this.props.buttonOnClick}
-                      current_clicked={this.props.current_clicked}
-                      indicator_left={this.props.indicator_left}/>
+                    indicator_left={this.props.indicator_left}/>
         </Frame>
       </div>
     );
@@ -54,19 +59,20 @@ Contact.propTypes = {
   dispatch: PropTypes.func.isRequired,
   buttonOnClick: PropTypes.func,
 
-  current_clicked: PropTypes.string,
-  indicator_left: PropTypes.string
+  indicator_left: PropTypes.string,
+  contact_data: PropTypes.array
 };
 
 const mapStateToProps = createStructuredSelector({
-    current_clicked: makeSelectCurrentClicked(),
-    indicator_left: makeSelectIndicatorLeft()
+    indicator_left: makeSelectIndicatorLeft(),
+    current_index: makeSelectCurrentIndex(),
+    contact_data: makeSelectContactData()
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    buttonOnClick : (name, left) => dispatch(click(name, left))
+    buttonOnClick : (index, left) => dispatch(click(index, left))
   };
 }
 

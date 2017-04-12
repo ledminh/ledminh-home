@@ -19,21 +19,27 @@ const makeSelectContact = () => createSelector(
   (substate) => substate.toJS()
 );
 
-const makeSelectCurrentClicked = () => createSelector(
-  selectContactDomain(),
-  (contact) => contact.get('current_clicked')
-);
 
 const makeSelectIndicatorLeft = () => createSelector(
   selectContactDomain(),
-  (contact) => contact.get('indicator_left')
+  (substate) => substate.get('indicator_left')
 );
 
+const makeSelectContactData = () => createSelector(
+  selectContactDomain(),
+  (substate) => substate.get('contact_data').toJS()
+);
+
+const makeSelectCurrentIndex = () => createSelector(
+  selectContactDomain(),
+  (substate) => substate.get('current_index')
+);
 
 export default makeSelectContact;
 
 export {
   selectContactDomain,
-  makeSelectCurrentClicked,
-  makeSelectIndicatorLeft
+  makeSelectIndicatorLeft,
+  makeSelectContactData,
+  makeSelectCurrentIndex
 };
