@@ -6,15 +6,20 @@
 
 import { fromJS } from 'immutable';
 import {
-  DEFAULT_ACTION,
+  CLICK,
 } from './constants';
 
-const initialState = fromJS({});
+const initialState = fromJS({
+  current_clicked: ``,
+  indicator_left: `0px`
+});
 
 function contactReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case CLICK:
+      return state
+                .set('current_clicked', action.name)
+                .set('indicator_left', action.left + 'px');
     default:
       return state;
   }

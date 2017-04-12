@@ -10,7 +10,9 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
-import makeSelectContact from './selectors';
+import {makeSelectCurrentClicked, makeSelectIndicatorLeft} from './selectors';
+
+import {click} from './actions';
 
 import MenuBar from './menu-bar';
 
@@ -39,7 +41,9 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
           ]}
         />
         <Frame>
-            <MenuBar />
+            <MenuBar buttonOnClick={this.props.buttonOnClick}
+                      current_clicked={this.props.current_clicked}
+                      indicator_left={this.props.indicator_left}/>
         </Frame>
       </div>
     );
@@ -48,15 +52,21 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
 
 Contact.propTypes = {
   dispatch: PropTypes.func.isRequired,
+  buttonOnClick: PropTypes.func,
+
+  current_clicked: PropTypes.string,
+  indicator_left: PropTypes.string
 };
 
 const mapStateToProps = createStructuredSelector({
-  Contact: makeSelectContact(),
+    current_clicked: makeSelectCurrentClicked(),
+    indicator_left: makeSelectIndicatorLeft()
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
+    buttonOnClick : (name, left) => dispatch(click(name, left))
   };
 }
 

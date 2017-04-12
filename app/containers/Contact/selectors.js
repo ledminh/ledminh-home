@@ -19,7 +19,21 @@ const makeSelectContact = () => createSelector(
   (substate) => substate.toJS()
 );
 
+const makeSelectCurrentClicked = () => createSelector(
+  selectContactDomain(),
+  (contact) => contact.get('current_clicked')
+);
+
+const makeSelectIndicatorLeft = () => createSelector(
+  selectContactDomain(),
+  (contact) => contact.get('indicator_left')
+);
+
+
 export default makeSelectContact;
+
 export {
   selectContactDomain,
+  makeSelectCurrentClicked,
+  makeSelectIndicatorLeft
 };
