@@ -2,11 +2,15 @@ import { take, call, put, select } from 'redux-saga/effects';
 
 import {delay} from 'redux-saga';
 
-import {changeIndicatorLeft, changeCurrentIndex} from './actions';
+import {changeIndicatorLeft, changeCurrentIndex, loadData} from './actions';
 
 import {
-  CLICK
+  CLICK,
+  REQUEST_DATA,
+  LOAD_DATA
 } from './constants';
+
+import {contact_data} from 'data';
 
 // Individual exports for testing
 export function* clickSaga() {
@@ -21,7 +25,15 @@ export function* clickSaga() {
     }
 }
 
+export function* dataSaga(){
+    while(true){
+        yield take(REQUEST_DATA);
+        yield put(loadData(contact_data));
+    }
+}
+
 // All sagas to be loaded
 export default [
   clickSaga,
+  dataSaga
 ];

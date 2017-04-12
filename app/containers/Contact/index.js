@@ -16,7 +16,7 @@ import {makeSelectIndicatorLeft,
         makeSelectCurrentIndex} from './selectors';
 
 
-import {click} from './actions';
+import {click, requestData} from './actions';
 
 import MenuBar from './menu-bar';
 
@@ -34,6 +34,10 @@ const Frame = styled.div`
 `;
 
 export class Contact extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  componentWillMount(){
+      this.props.requestData();
+  }
+
   render() {
     return (
       <div>
@@ -72,7 +76,8 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    buttonOnClick : (index, left) => dispatch(click(index, left))
+    buttonOnClick : (index, left) => dispatch(click(index, left)),
+    requestData : () => dispatch(requestData())
   };
 }
 

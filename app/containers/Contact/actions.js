@@ -7,7 +7,9 @@
 import {
   CLICK,
   CHANGE_INDICATOR_LEFT,
-  CHANGE_CURRENT_INDEX
+  CHANGE_CURRENT_INDEX,
+  LOAD_DATA,
+  REQUEST_DATA
 } from './constants';
 
 export function click(index, left) {
@@ -29,5 +31,18 @@ export function changeCurrentIndex(index){
   return {
     type: CHANGE_CURRENT_INDEX,
     index
+  }
+}
+
+export function requestData(){
+  return {
+    type: REQUEST_DATA
+  }
+}
+
+export function loadData(data){
+  return {
+    type: LOAD_DATA,
+    data
   }
 }
