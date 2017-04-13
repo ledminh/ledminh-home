@@ -34,14 +34,11 @@ const Style = styled.div`
   ${props => props.smallscreen? smallScreenButton : normalButton}
 `;
 
-class Button extends React.PureComponent {
-  render() {
-    return (
-      <Style smallscreen={this.props.smallscreen} onClick={(e) => location.assign(this.props.link)}>
-          {this.props.children}
-      </Style>
-    )
-  }
-}
+const Button = ({children, smallscreen, menuOnClick, link}) => (
+  <Style smallscreen={smallscreen} onClick={smallscreen? menuOnClick : (e) => location.assign(link)}>
+      {children}
+  </Style>
+);
+
 
 export default Button;

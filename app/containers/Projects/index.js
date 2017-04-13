@@ -59,7 +59,7 @@ Projects.propTypes = {
   dispatch: PropTypes.func.isRequired,
   current_large : PropTypes.string,
   projects: PropTypes.array,
-  category_display: PropTypes.boolean
+  category_display: PropTypes.bool
 };
 
 const mapStateToProps = createStructuredSelector({
