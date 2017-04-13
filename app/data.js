@@ -252,6 +252,88 @@ export const about_me = {
 
 export const projects = [
   {
+    category: "website",
+    title: "Ledminh Home",
+    description: {
+      short: "My portfolio page which is this website",
+      full: `
+        This portfolio page is constantly updated to reflect my current knowledge on web
+        development. I also used the most recent technique that I learn to build the website.
+        So far, they are Redux, React, Saga, and no D3 at all. I also tried to stop using D3 for all of the simple
+        animations that I can easily do using CSS. I will come back to D3 for a more serious matter. \\br
+        The source code is posted on github.
+      `
+    },
+    links: {
+      source_code: 'https://github.com/ledminh/ledminh-home/',
+      demo: 'https://www.ledminh.com/'
+    }
+
+  },
+
+
+  {
+    category: "game",
+    title: "Stamper Game",
+    description: {
+      short: "Collect stamps to your basket but don't let it full. ",
+      full: `This is the most complex game I built so far. The rule is explained in the game. \\br
+            What I like about this game is this is the first web app that I built from front end to back end.
+            In the back-end, I used Express.js framework. For database, I used mongoDB to store score. I also used passport
+            for Facebook login feature. The front-end was built mainly on React and D3.
+      `
+    },
+    links: {
+      source_code: '',
+      demo: 'http://stamps.ledminh.com/'
+    }
+
+  },
+
+  {
+    category: "game",
+    title: "Dungeon Game",
+    description: {
+      short: "A simple 4 levels role playing game built in JavaScript.",
+      full: `This is the first role playing I built and one of the most complicated games I've ever built.
+            The goal is to kill the boss at level 4. You must kill all enemies to pass a certain level. "You"
+            are the orange rectangle. The blue rectangles are health potion. The red rectangles are enemies.
+            Your strength is calculated base on your XP and your weapon. \\br
+
+            This game is built entirely by React and D3.
+            `
+    },
+    links: {
+      source_code: 'http://codepen.io/ledminh/pen/VjPeoN',
+      demo: 'http://codepen.io/ledminh/full/VjPeoN'
+    }
+
+  },
+
+  {
+    category: "website",
+    title: "ESL Website",
+    description: {
+      short: "A collection of interactive pages for ESL Learners",
+      full: `This is one of my favorite project. The idea is to build a collection of interactive pages
+      for ESL learners (ESL stands for English as a Second Language).\\br
+
+      What I like about this project is that I built it from scratch, both front-end and back-end. I used
+      React for Front End. For Back-End, I used Node.js and Express. Especially, instead of using mongoDB, I decided to
+      build my own database system from scratch and it turned into a system that fetching data from a text file and send it
+      to the client-side in json format. From doing that, I learned a lot about reading, writing
+      file, and a litte bit about data management.
+      `
+    },
+    links: {
+      source_code: '',
+      demo: 'http://www.esl-library.net/'
+    }
+
+  },
+
+
+  {
     category: "game",
     title: "Tic tac toe",
     description: {
@@ -264,6 +346,60 @@ export const projects = [
     links: {
       source_code: 'http://codepen.io/ledminh/pen/XdWNwz',
       demo: 'http://codepen.io/ledminh/full/XdWNwz/'
+    }
+
+  },
+
+  {
+    category: "game",
+    title: "Simon Game",
+    description: {
+      short: "A small game that tests your memory",
+      full: `The computer will play a series of nodes, starting from one node to 20 nodes in a particular order. In order to win, you have
+      to play the series again in the exact order. \\br
+      This is the second complex game that I built (after Tic Tac Toe). I built it using mostly jQuery. What I remember most about it is how
+      confusing it was to use setTimeout to manipulate the playing order.`
+    },
+    links: {
+      source_code: 'http://codepen.io/ledminh/pen/LNbGVR/',
+      demo: 'http://codepen.io/ledminh/full/LNbGVR/'
+    }
+
+  },
+
+  {
+    category: "others",
+    title: "Game of Life",
+    description: {
+      short: "A simulation of Game of Life Theory",
+      full: `This is not a game. It's an online simulation of Game of Life theory by John Conway, hence the name. \\br
+      This is a zero-player game since its evoluion is determined by its initial state, requiring no further input.
+      The player click on some of the small little cells on the screen to create a pattern and then click on START button
+      to run the game. \\br
+      This is the first project I built using React.
+      `
+    },
+    links: {
+      source_code: 'http://codepen.io/ledminh/pen/zqEgdd',
+      demo: 'http://codepen.io/ledminh/full/zqEgdd/'
+    }
+
+  },
+
+  {
+    category: "Graph",
+    title: "Global Heat Map",
+    description: {
+      short: "Monthly Global Land - Surface Temperature from 1753 to 2015",
+      full: `A simple graph of monthly surface temperature on Earth from 1753 to 2015 with the shade of colors show the value of
+      temperature. \\br
+      I built this graph using jQuery and D3. This is also one of a very few apps I built using D3. I know D3 is very powerful in
+      this kind of jobs but I still don't have time to learn more on it yet.
+      `
+    },
+    links: {
+      source_code: 'http://codepen.io/ledminh/pen/GqjeXw',
+      demo: 'http://codepen.io/ledminh/full/GqjeXw'
     }
 
   },
@@ -318,6 +454,20 @@ export const projects = [
 
   },
 
+  {
+    category: "others",
+    title: "FCC Top Board",
+    description: {
+      short: "A Leaderboard of Free Code Campers",
+      full: `This is an online list of top campers of all time and of the last 30 days.
+            This is one of my first experiments with responsive design and ajax.`
+    },
+    links: {
+      source_code: 'http://codepen.io/ledminh/pen/xVrOBj/',
+      demo: 'http://codepen.io/ledminh/full/xVrOBj/'
+    }
+
+  },
 ]
 
 /*

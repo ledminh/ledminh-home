@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'utils/compose';
+import compose from './compose';
 
 
 /*******************************

@@ -36,6 +36,40 @@ const Content = styled.div`
   padding: 5px;
 `
 
+/*****************
+* BUTTONS
+******************/
+const source = `
+  font-weight: bold;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #ebedd0;
+  }
+`;
+
+const link = `
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7d83c4;
+  }
+`
+
+const close = `
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f2d0d0;
+  }
+`;
+
+const non_link = `
+  background-color: #e5e5e5;
+`
+
 const Button = styled.div`
   display: inline-block;
   border: 2px solid black;
@@ -43,14 +77,13 @@ const Button = styled.div`
   padding: 5px;
   margin-left: 5px;
   font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
 
-  &:hover {
-    ${props => props.source? 'background-color: #ebedd0' : ''}
-    ${props => props.link? 'background-color: #7d83c4' : ''}
-    ${props => props.close? 'background-color: #f2d0d0' : ''}
-  }
+
+
+  ${props => (props.source)? ((props.href !== '')? source : non_link) : ''}
+  ${props => (props.link)? ((props.href !== '')? link : non_link) : ''}
+  ${props => props.close? close : ''}
+
 `;
 
 
@@ -74,8 +107,8 @@ export class Buttons extends React.PureComponent {
     return (
       <Wrapper css_state={this.props.css_state}>
         <Content>
-            <Button source onClick={() => open(this.props.links.source_code)}>SOURCE CODE</Button>
-            <Button link onClick={() => open(this.props.links.demo)}>LINK/DEMO</Button>
+            <Button source href={this.props.links.source_code} onClick={() => open(this.props.links.source_code)}>SOURCE CODE</Button>
+            <Button link href={this.props.links.demo} onClick={() => open(this.props.links.demo)}>LINK/DEMO</Button>
             <Button close onClick={this.buttonOnclick}>CLOSE</Button>
         </Content>
       </Wrapper>

@@ -23,19 +23,17 @@ import {change_CSS_State} from 'containers/Projects/actions';
 const Wrapper_normal = `
     position: relative;
     display: inline-block;
-    width: 210px;
-    height: ${250*210/200}px;
+    width: 220px;
+    height: ${250*220/200}px;
     margin: 50px 15px 10px 15px;
-
 `;
 
 const Wrapper_hover = `
     position: relative;
     display: inline-block;
-    width: 210px;
-    height: ${250*210/200}px;
-    margin: 50px 10px 10px 10px;
-
+    width: 220px;
+    height: ${250*220/200}px;
+    margin: 50px 15px 10px 15px;
 `;
 
 const Wrapper_large = `
@@ -69,7 +67,7 @@ const Style_normal = `
 
   background-color: #c4c4c4;
 
-  width: 200px;
+  width: 210px;
   height: 250px;
 
   cursor: pointer;

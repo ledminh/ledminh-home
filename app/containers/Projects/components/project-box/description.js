@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {renderParagraphs} from 'utils/render-paragraphs';
+
 import {
   PROJECT_BOX__NORMAL,
   PROJECT_BOX__HOVER,
@@ -43,7 +45,7 @@ const Content = styled.div`
 const Description = ({text, css_state}) => (
   <Wrapper css_state={css_state}>
       <Title>Description</Title>
-      <Content>{css_state === PROJECT_BOX__LARGE? text.full : text.short}</Content>
+      <Content>{css_state === PROJECT_BOX__LARGE? renderParagraphs(text.full) : text.short}</Content>
   </Wrapper>
 );
 
