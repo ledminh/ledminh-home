@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {renderParagraphs} from './utils';
+import {renderParagraphs} from 'utils/render-paragraphs';
 
 import {
     SECTION_SUMMARY

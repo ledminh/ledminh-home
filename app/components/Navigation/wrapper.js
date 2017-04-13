@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   padding-left: 5px;
   background-color: gray;
 
-  z-index: 1000;
+  z-index: 10000;
 `;
 
 export default Wrapper;
