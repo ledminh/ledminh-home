@@ -250,6 +250,27 @@ export const about_me = {
 }
 
 
+export const contact_data = [
+  {
+    title: 'Email',
+    content: 'duyminh.le310@gmail.com'
+  },
+
+  {
+    title: 'LinkedIn',
+    content: 'https://www.linkedin.com/in/ledminh/'
+  },
+
+  {
+    title: 'GitHub',
+    content: 'https://github.com/ledminh'
+  },
+
+  {
+    title: "Free Code Camp",
+    content: 'https://www.freecodecamp.com/ledminh'
+  }
+]
 /*
 
 */
