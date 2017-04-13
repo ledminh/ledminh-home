@@ -35,6 +35,7 @@ const makeSelectCurrentIndex = () => createSelector(
   (substate) => substate.get('current_index')
 );
 
+
 export default makeSelectContact;
 
 export {

@@ -18,8 +18,10 @@ import {makeSelectIndicatorLeft,
 
 import {click, requestData} from './actions';
 
-import MenuBar from './menu-bar';
+import Header from 'components/Header';
+import Navigation from 'components/Navigation';
 
+import MenuBar from './menu-bar';
 import Screen from './screen';
 
 const Frame = styled.div`
@@ -49,6 +51,8 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
             { name: 'author', content: 'Minh Le' },
           ]}
         />
+        <Header />
+        <Navigation />
         <Frame>
             <Screen data={this.props.contact_data.slice(0, this.props.current_index + 1)}/>
             <MenuBar buttonOnClick={this.props.buttonOnClick}
