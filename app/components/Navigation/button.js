@@ -34,8 +34,8 @@ const Style = styled.div`
   ${props => props.smallscreen? smallScreenButton : normalButton}
 `;
 
-const Button = ({children, smallscreen, menuOnClick, link}) => (
-  <Style smallscreen={smallscreen} onClick={smallscreen? menuOnClick : (e) => location.assign(link)}>
+const Button = ({children, smallscreen, onClick, link}) => (
+  <Style smallscreen={smallscreen} onClick={smallscreen? onClick : (e) => location.assign(link)}>
       {children}
   </Style>
 );

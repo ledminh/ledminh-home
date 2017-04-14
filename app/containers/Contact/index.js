@@ -13,7 +13,8 @@ import Helmet from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import {makeSelectIndicatorLeft,
         makeSelectContactData,
-        makeSelectCurrentIndex} from './selectors';
+        makeSelectCurrentIndex,
+        makeSelectSmallScreenMenu} from './selectors';
 
 
 import {click, requestData} from './actions';
@@ -52,7 +53,7 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
           ]}
         />
         <Header />
-        <Navigation />
+        <Navigation smallscreen_menu={this.props.smallscreen_menu}/>
         <Frame>
             <Screen data={this.props.contact_data.slice(0, this.props.current_index + 1)}/>
             <MenuBar buttonOnClick={this.props.buttonOnClick}
@@ -68,13 +69,15 @@ Contact.propTypes = {
   buttonOnClick: PropTypes.func,
 
   indicator_left: PropTypes.string,
-  contact_data: PropTypes.array
+  contact_data: PropTypes.array,
+  smallscreen_menu: React.PropTypes.bool
 };
 
 const mapStateToProps = createStructuredSelector({
     indicator_left: makeSelectIndicatorLeft(),
     current_index: makeSelectCurrentIndex(),
-    contact_data: makeSelectContactData()
+    contact_data: makeSelectContactData(),
+    smallscreen_menu: makeSelectSmallScreenMenu()
 });
 
 function mapDispatchToProps(dispatch) {

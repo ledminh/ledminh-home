@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import messages from './messages';
 
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
 const Frame = styled.div`
+  display: ${props => props.display? 'block' : 'none'};
   position: fixed;
   top: 110px;
   left: 50%;
@@ -39,8 +43,8 @@ const Button = styled.div`
     }
 `;
 
-const MenuSmallScreen = () => (
-  <Frame>
+const MenuSmallScreen = ({display}) => (
+  <Frame display={display}>
     <Content>
       {
         messages.buttons.map((button, i) => <Button key={i} onClick={() => location.assign(button.link)}>{button.title.toUpperCase()}</Button>)
@@ -49,5 +53,20 @@ const MenuSmallScreen = () => (
   </Frame>
 );
 
+MenuSmallScreen.propTypes = {
+  dispatch: React.PropTypes.func.isRequired,
 
-export default MenuSmallScreen
+};
+
+const mapStateToProps = createStructuredSelector({
+
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuSmallScreen);

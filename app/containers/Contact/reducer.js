@@ -5,7 +5,6 @@
  */
 
 import { fromJS } from 'immutable';
-import {combineReducers} from 'redux';
 
 import {
   CHANGE_INDICATOR_LEFT,
@@ -13,10 +12,14 @@ import {
   LOAD_DATA
 } from './constants';
 
+import {SWITCH_SMALL_SCREEN_MENU_DISPLAY} from 'components/Navigation/constants';
+
+
 const initialState = fromJS({
   indicator_left: `0px`,
   current_index: -1,
-  contact_data: []
+  contact_data: [],
+  smallscreen_menu: false
 });
 
 function contactReducer(state = initialState, action) {
@@ -32,11 +35,12 @@ function contactReducer(state = initialState, action) {
       return state
                 .set('indicator_left', action.left + 'px');
 
+    case SWITCH_SMALL_SCREEN_MENU_DISPLAY:
+      return state
+                .set('smallscreen_menu', !state.get('smallscreen_menu'))
     default:
       return state;
   }
 }
 
-export default combineReducers({
-  contact_state: contactReducer
-});
+export default contactReducer

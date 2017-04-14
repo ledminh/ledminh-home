@@ -31,7 +31,7 @@ import ProfileText from 'containers/ProfileText';
 import ProfilePicture from 'containers/ProfilePicture';
 
 
-import {makeSelectCurrentProfile, makeSelectCurrentSection} from './selectors';
+import {makeSelectCurrentProfile, makeSelectCurrentSection, makeSelectSmallScreenMenu} from './selectors';
 
 import messages from './messages';
 
@@ -49,7 +49,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
             ]}
           />
           <Header />
-          <Navigation />
+          <Navigation smallscreen_menu={this.props.smallscreen_menu}/>
 
           <MainFrame current_profile={this.props.current_profile}>
               <TopBar>
@@ -75,7 +75,8 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
 
 HomePage.propTypes = {
   current_profile: React.PropTypes.string,
-  current_section: React.PropTypes.string
+  current_section: React.PropTypes.string,
+  smallscreen_menu: React.PropTypes.bool
 }
 
 function mapDispatchToProps(dispatch){
@@ -87,7 +88,8 @@ function mapDispatchToProps(dispatch){
 
 const mapStateToProps = createStructuredSelector({
   current_profile: makeSelectCurrentProfile(),
-  current_section: makeSelectCurrentSection()
+  current_section: makeSelectCurrentSection(),
+  smallscreen_menu: makeSelectSmallScreenMenu()
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(HomePage);

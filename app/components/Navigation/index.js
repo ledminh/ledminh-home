@@ -7,9 +7,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {renderButton} from './utils';
+import cuid from 'cuid';
+
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
+import {switchMenu} from './actions';
+
 import messages from './messages';
 
+import Button from './button';
 import MenuSmallScreen from './menu-smallscreen';
 
 const Frame =  styled.div`
@@ -29,13 +36,31 @@ class Navigation extends React.PureComponent { // eslint-disable-line react/pref
     return (
       <div>
         <Frame>
-          {renderButton(messages.buttons)}
+          {messages.buttons.map((button, i) => <Button key={i} link={button.link}>{button.title.toUpperCase()}</Button>)}
+          <Button key={cuid()} smallscreen onClick={this.props.menuOnClick}>MENU</Button>
         </Frame>
-        <MenuSmallScreen />
+        <MenuSmallScreen display={this.props.smallscreen_menu}/>
       </div>
     );
   }
 }
 
 
-export default Navigation;
+Navigation.propTypes = {
+  dispatch: React.PropTypes.func.isRequired,
+  menuOnClick: React.PropTypes.func
+};
+
+const mapStateToProps = createStructuredSelector({
+
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    menuOnClick: () => dispatch(switchMenu())
+
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

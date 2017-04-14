@@ -3,7 +3,7 @@ import { createSelector } from 'reselect';
 /**
  * Direct selector to the projects state domain
  */
-const selectProjectsDomain = () => (state) => state.get('projects').projects_state;
+const selectProjectsDomain = () => (state) => state.get('projects');
 
 /**
  * Other specific selectors
@@ -34,11 +34,17 @@ const makeSelectCategoriesDisplay = () => createSelector(
   (data) => data.get('category_display')
 );
 
+const makeSelectSmallScreenMenu = () => createSelector(
+  selectProjectsDomain(),
+  (data) => data.get('smallscreen_menu')
+)
+
 export default makeSelectProjects;
 
 export {
   selectProjectsDomain,
   makeSelectCurrentLarge,
   makeSelectCategories,
-  makeSelectCategoriesDisplay
+  makeSelectCategoriesDisplay,
+  makeSelectSmallScreenMenu
 };

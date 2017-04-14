@@ -16,9 +16,14 @@ const makeSelectCurrentSection = () => createSelector(
   (home_state) => home_state.get('current_section')
 );
 
+const makeSelectSmallScreenMenu = () => createSelector(
+  selectHomeState,
+  (home_state) => home_state.get('smallscreen_menu')
+)
+
 export {
   selectHomeState,
   makeSelectCurrentProfile,
-  makeSelectCurrentSection
+  makeSelectCurrentSection,
+  makeSelectSmallScreenMenu
 };
- 

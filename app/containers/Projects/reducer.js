@@ -5,7 +5,6 @@
  */
 
 import { fromJS } from 'immutable';
-import {combineReducers} from 'redux';
 
 import {
   LOAD_DATA,
@@ -15,10 +14,13 @@ import {
   CHANGE_CATEGORY_DISPLAY
 } from './constants';
 
+import {SWITCH_SMALL_SCREEN_MENU_DISPLAY} from 'components/Navigation/constants';
+
 const initialState = fromJS({
   projects: [],
   current_large: ``,
-  category_display: false
+  category_display: false,
+  smallscreen_menu: false
 });
 
 function projectsReducer(state = initialState, action) {
@@ -46,11 +48,14 @@ function projectsReducer(state = initialState, action) {
     case CHANGE_CATEGORY_DISPLAY:
         return state
                   .set('category_display', !state.get('category_display'));
+
+    case SWITCH_SMALL_SCREEN_MENU_DISPLAY:
+        return state
+                  .set('smallscreen_menu', !state.get('smallscreen_menu'))
+
     default:
       return state;
   }
 }
 
-export default combineReducers({
-  projects_state: projectsReducer
-});
+export default projectsReducer;
