@@ -35,6 +35,10 @@ const makeSelectCurrentIndex = () => createSelector(
   (substate) => substate.get('current_index')
 );
 
+const makeSelectSmallScreenMenu = () => createSelector(
+  selectContactDomain(),
+  (substate) => substate.get('smallscreen_menu')
+)
 
 export default makeSelectContact;
 
@@ -42,5 +46,6 @@ export {
   selectContactDomain,
   makeSelectIndicatorLeft,
   makeSelectContactData,
-  makeSelectCurrentIndex
+  makeSelectCurrentIndex,
+  makeSelectSmallScreenMenu
 };

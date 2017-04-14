@@ -24,9 +24,12 @@ import {
   CHANGE_SECTION
 } from './constants';
 
+import {SWITCH_SMALL_SCREEN_MENU_DISPLAY} from 'components/Navigation/constants';
+
 const initialState = fromJS({
   current_profile: PROFILE_NOW,
-  current_section: SECTION_SUMMARY
+  current_section: SECTION_SUMMARY,
+  smallscreen_menu: false
 });
 
 function home_state(state = initialState, action){
@@ -37,6 +40,9 @@ function home_state(state = initialState, action){
     case CHANGE_SECTION:
       return state
                 .set('current_section', action.name);
+    case SWITCH_SMALL_SCREEN_MENU_DISPLAY:
+      return state
+                .set('smallscreen_menu', !state.get('smallscreen_menu'))
   }
 
   return state;

@@ -34,11 +34,17 @@ const makeSelectCategoriesDisplay = () => createSelector(
   (data) => data.get('category_display')
 );
 
+const makeSelectSmallScreenMenu = () => createSelector(
+  selectProjectsDomain(),
+  (data) => data.get('smallscreen_menu')
+)
+
 export default makeSelectProjects;
 
 export {
   selectProjectsDomain,
   makeSelectCurrentLarge,
   makeSelectCategories,
-  makeSelectCategoriesDisplay
+  makeSelectCategoriesDisplay,
+  makeSelectSmallScreenMenu
 };
