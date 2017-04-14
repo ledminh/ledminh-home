@@ -5,6 +5,8 @@
  */
 
 import { fromJS } from 'immutable';
+import {combineReducers} from 'redux';
+
 import {
   LOAD_DATA,
   CHANGE_PROJECT_CSS_STATE,
@@ -49,4 +51,6 @@ function projectsReducer(state = initialState, action) {
   }
 }
 
-export default projectsReducer;
+export default combineReducers({
+  projects_state: projectsReducer
+});

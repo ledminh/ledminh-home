@@ -3,7 +3,7 @@ import { createSelector } from 'reselect';
 /**
  * Direct selector to the projects state domain
  */
-const selectProjectsDomain = () => (state) => state.get('projects');
+const selectProjectsDomain = () => (state) => state.get('projects').projects_state;
 
 /**
  * Other specific selectors

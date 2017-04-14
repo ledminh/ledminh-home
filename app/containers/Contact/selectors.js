@@ -3,7 +3,7 @@ import { createSelector } from 'reselect';
 /**
  * Direct selector to the contact state domain
  */
-const selectContactDomain = () => (state) => state.get('contact');
+const selectContactDomain = () => (state) => state.get('contact').contact_state;
 
 /**
  * Other specific selectors

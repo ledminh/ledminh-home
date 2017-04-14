@@ -5,6 +5,8 @@
  */
 
 import { fromJS } from 'immutable';
+import {combineReducers} from 'redux';
+
 import {
   CHANGE_INDICATOR_LEFT,
   CHANGE_CURRENT_INDEX,
@@ -35,4 +37,6 @@ function contactReducer(state = initialState, action) {
   }
 }
 
-export default contactReducer;
+export default combineReducers({
+  contact_state: contactReducer
+});
