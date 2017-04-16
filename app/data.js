@@ -272,25 +272,6 @@ export const projects = [
 
   },
 
-
-  {
-    category: "game",
-    title: "Stamper Game",
-    description: {
-      short: "Collect stamps to your basket but don't let it full. ",
-      full: `This is the most complex game I built so far. The rule is explained in the game. \\br
-            What I like about this game is this is the first web app that I built from front end to back end.
-            In the back-end, I used Express.js framework. For database, I used mongoDB to store score. I also used passport
-            for Facebook login feature. The front-end was built mainly on React and D3.
-      `
-    },
-    links: {
-      source_code: '',
-      demo: 'http://stamps.ledminh.com/'
-    }
-
-  },
-
   {
     category: "game",
     title: "Dungeon Game",
