@@ -82,10 +82,10 @@ const MenuBar = ({buttonOnClick, indicator_left}) => (
   <div>
       <Frame>
         <Content>
-          <Button onClick={onClick(0, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/email.svg"/></Button>
+          <Button onClick={onClick(0, buttonOnClick)}><img src="https://www.ledminh.com/imgs/email.svg"/></Button>
           <Button onClick={onClick(1, buttonOnClick)}><img src="https://www.ledminh.com/imgs/linkedin.png"/></Button>
           <Button onClick={onClick(2, buttonOnClick)}><img src="https://www.ledminh.com/imgs/github.png"/></Button>
-          <Button onClick={onClick(3, buttonOnClick)}><img src="https://www.ledminh.com/imgs/about-me/free-code-camp.jpg"/></Button>
+          <Button onClick={onClick(3, buttonOnClick)}><img src="https://www.ledminh.com/imgs/free-code-camp.jpg"/></Button>
         </Content>
         <Indicator left={indicator_left}/>
       </Frame>
