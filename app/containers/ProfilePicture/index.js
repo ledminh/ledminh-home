@@ -30,7 +30,7 @@ const ProfilePicture = ({onEnterPicture, onEnterNow, onEnterThen,
           <Now state={now} onMouseEnter={onEnterNow} onMouseLeave={onLeaveNow} onClick={onClickNow}/>
           <Then state={then} onMouseEnter={onEnterThen} onMouseLeave={onLeaveThen} onClick={onClickThen}/>
       </NowThen>
-      <Img src="https://www.ledminh.com/imgs/about-me/profile-picture.jpg" />
+      <Img src="https://www.ledminh.com/imgs/profile-picture.jpg" />
   </Frame>
 );
 
